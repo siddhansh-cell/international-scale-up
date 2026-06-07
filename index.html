@@ -8,8 +8,6 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { background: #000; color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; padding: 40px 20px; }
   .container { max-width: 960px; margin: 0 auto; }
-
-  /* Typography */
   h1 { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
   h2 { font-size: 22px; font-weight: 600; margin-bottom: 16px; color: #fff; border-bottom: 1px solid #2A2A2A; padding-bottom: 8px; }
   h3 { font-size: 17px; font-weight: 600; margin-bottom: 10px; color: #C8C8C8; }
@@ -17,83 +15,58 @@
   p { color: #C8C8C8; margin-bottom: 12px; font-size: 15px; }
   a { color: #3D9C50; text-decoration: none; }
   a:hover { text-decoration: underline; }
-
-  /* Cards */
   .card { background: #1A1A1A; border: 1px solid #2A2A2A; border-radius: 12px; padding: 24px; margin-bottom: 20px; position: relative; }
-  .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; }
-
-  /* Hero */
   .hero { background: #1A1A1A; border: 1px solid #2A2A2A; border-radius: 16px; padding: 32px; margin-bottom: 32px; }
   .hero-question { font-size: 18px; color: #C89B2C; font-style: italic; margin: 16px 0; padding: 16px; background: rgba(200,155,44,0.08); border-left: 3px solid #C89B2C; border-radius: 0 8px 8px 0; }
   .hero-meta { display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap; }
   .hero-meta-item { font-size: 13px; color: #888; }
   .hero-meta-item strong { color: #C8C8C8; }
-
-  /* Pill */
   .pill { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; }
   .pill-green { background: rgba(61,156,80,0.15); color: #3D9C50; }
   .pill-red { background: rgba(200,78,44,0.15); color: #C84E2C; }
   .pill-amber { background: rgba(200,155,44,0.15); color: #C89B2C; }
   .pill-blue { background: rgba(80,140,220,0.15); color: #508CDC; }
-
-  /* Tables */
   table { width: 100%; border-collapse: collapse; margin-bottom: 16px; font-size: 14px; }
   th { background: #111; color: #888; font-weight: 600; text-transform: uppercase; font-size: 11px; letter-spacing: 0.5px; padding: 10px 12px; text-align: left; border-bottom: 1px solid #2A2A2A; }
   td { padding: 10px 12px; border-bottom: 1px solid #1A1A1A; color: #C8C8C8; vertical-align: top; }
   tr:hover td { background: rgba(255,255,255,0.02); }
-
-  /* Summary grid */
   .summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
   .summary-stat { background: #1A1A1A; border: 1px solid #2A2A2A; border-radius: 10px; padding: 16px; text-align: center; }
   .summary-stat .number { font-size: 28px; font-weight: 700; }
   .summary-stat .label { font-size: 12px; color: #888; margin-top: 4px; }
-
-  /* Cluster cards */
   .cluster-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 24px; }
   .cluster-card { background: #1A1A1A; border: 1px solid #2A2A2A; border-radius: 10px; padding: 20px; }
   .cluster-card h3 { margin-bottom: 6px; color: #fff; }
   .cluster-card .markets { font-size: 13px; color: #888; margin-bottom: 12px; }
-
-  /* Function sections */
   .function-section { margin-bottom: 32px; }
-  .function-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .function-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
   .function-number { width: 32px; height: 32px; background: #3D9C50; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; flex-shrink: 0; }
   .function-title { font-size: 20px; font-weight: 600; }
-
-  /* CLE framework */
   .cle-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 16px 0; }
   .cle-col { background: #111; border: 1px solid #2A2A2A; border-radius: 8px; padding: 14px; }
-  .cle-col h4 { margin-bottom: 8px; }
   .cle-col ul { list-style: none; padding: 0; }
   .cle-col li { font-size: 13px; color: #C8C8C8; padding: 4px 0; padding-left: 16px; position: relative; }
   .cle-col li::before { content: ''; position: absolute; left: 0; top: 10px; width: 6px; height: 6px; border-radius: 50%; }
   .cle-central li::before { background: #3D9C50; }
   .cle-local li::before { background: #C89B2C; }
   .cle-external li::before { background: #508CDC; }
-
-  /* Dependency chain */
-  .dep-chain { display: flex; align-items: center; gap: 0; margin: 20px 0; overflow-x: auto; padding-bottom: 8px; }
-  .dep-step { background: #1A1A1A; border: 1px solid #2A2A2A; border-radius: 8px; padding: 12px 16px; min-width: 140px; text-align: center; flex-shrink: 0; }
-  .dep-step .step-label { font-size: 11px; color: #888; text-transform: uppercase; }
-  .dep-step .step-name { font-size: 14px; font-weight: 600; color: #fff; }
-  .dep-step .step-detail { font-size: 12px; color: #5C5C5C; margin-top: 2px; }
-  .dep-arrow { font-size: 20px; color: #3D9C50; padding: 0 6px; flex-shrink: 0; }
-
-  /* Risk callout */
   .risk-box { background: rgba(200,78,44,0.06); border: 1px solid rgba(200,78,44,0.2); border-radius: 8px; padding: 14px 16px; margin: 12px 0; }
   .risk-box .risk-label { font-size: 11px; color: #C84E2C; font-weight: 700; text-transform: uppercase; margin-bottom: 4px; }
   .risk-box p { color: #C8C8C8; margin-bottom: 0; font-size: 13px; }
-
   .insight-box { background: rgba(61,156,80,0.06); border: 1px solid rgba(61,156,80,0.2); border-radius: 8px; padding: 14px 16px; margin: 12px 0; }
   .insight-box .insight-label { font-size: 11px; color: #3D9C50; font-weight: 700; text-transform: uppercase; margin-bottom: 4px; }
   .insight-box p { color: #C8C8C8; margin-bottom: 0; font-size: 13px; }
-
   .open-q-box { background: rgba(200,155,44,0.06); border: 1px solid rgba(200,155,44,0.2); border-radius: 8px; padding: 14px 16px; margin: 12px 0; }
   .open-q-box .q-label { font-size: 11px; color: #C89B2C; font-weight: 700; text-transform: uppercase; margin-bottom: 4px; }
   .open-q-box p { color: #C8C8C8; margin-bottom: 0; font-size: 13px; }
-
-  /* Section divider */
   .section-divider { border: none; border-top: 1px solid #2A2A2A; margin: 40px 0; }
+
+  /* Choice matrix */
+  .choice-table th { text-align: center; }
+  .choice-table td:not(:first-child) { text-align: center; }
+  .tick { color: #3D9C50; font-weight: 700; }
+  .cross { color: #C84E2C; font-weight: 700; }
+  .partial { color: #C89B2C; font-weight: 700; }
 
   /* Comment system */
   .comment-btn { position: absolute; top: 12px; right: 12px; background: #2A2A2A; border: none; color: #888; font-size: 18px; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
@@ -109,34 +82,16 @@
   .comment-item { background: rgba(200,155,44,0.06); border-left: 2px solid #C89B2C; padding: 8px 12px; margin-bottom: 8px; border-radius: 0 6px 6px 0; }
   .comment-item .comment-meta { font-size: 11px; color: #888; margin-bottom: 4px; }
   .comment-item .comment-text { font-size: 13px; color: #C8C8C8; }
-
-  /* Export bar */
   .export-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #1A1A1A; border-top: 1px solid #2A2A2A; padding: 10px 20px; display: flex; justify-content: center; gap: 12px; z-index: 100; }
   .export-bar button { background: #2A2A2A; border: none; color: #C8C8C8; padding: 8px 16px; border-radius: 6px; font-size: 13px; cursor: pointer; font-weight: 500; }
   .export-bar button:hover { background: #3A3A3A; }
   .export-bar .export-primary { background: #3D9C50; color: #fff; }
-
-  /* Badge for comment count */
-  .comment-count-badge { position: absolute; top: 6px; right: 6px; background: #C89B2C; color: #000; font-size: 10px; font-weight: 700; width: 18px; height: 18px; border-radius: 50%; display: none; align-items: center; justify-content: center; }
-
-  /* Footer spacing for fixed bar */
   .footer-spacer { height: 60px; }
-
-  /* Lists */
-  ul.clean { list-style: none; padding: 0; }
-  ul.clean li { padding: 6px 0; padding-left: 20px; position: relative; font-size: 14px; color: #C8C8C8; }
-  ul.clean li::before { content: '-'; position: absolute; left: 4px; color: #5C5C5C; }
-
-  /* OPEX table */
-  .opex-row-central { border-left: 3px solid #3D9C50; }
-  .opex-row-local { border-left: 3px solid #C89B2C; }
-  .opex-row-external { border-left: 3px solid #508CDC; }
 
   @media (max-width: 768px) {
     .summary-grid { grid-template-columns: repeat(2, 1fr); }
     .cluster-grid { grid-template-columns: 1fr; }
     .cle-grid { grid-template-columns: 1fr; }
-    .dep-chain { flex-wrap: wrap; }
   }
 </style>
 </head>
@@ -159,15 +114,15 @@
     </div>
   </div>
 
-  <!-- SUMMARY TABLE -->
+  <!-- SUMMARY -->
   <div class="summary-grid">
     <div class="summary-stat">
-      <div class="number" style="color:#3D9C50;">4</div>
+      <div class="number" style="color:#3D9C50;">5</div>
       <div class="label">Market clusters</div>
     </div>
     <div class="summary-stat">
       <div class="number" style="color:#C89B2C;">&pound;2M</div>
-      <div class="label">Monthly target (all markets)</div>
+      <div class="label">Monthly target (cumulative)</div>
     </div>
     <div class="summary-stat">
       <div class="number" style="color:#508CDC;">5</div>
@@ -179,23 +134,18 @@
     </div>
   </div>
 
-  <!-- TOP-LINE VIEW -->
-  <div class="card" data-section="topline">
+  <!-- KEY CONSIDERATION -->
+  <div class="card" data-section="consideration">
     <button class="comment-btn" onclick="toggleComment(this)" title="Add comment">&#128172;</button>
-    <h2>Top-line view</h2>
-    <p>We have a solid foundational funnel in the UK. The question is which parts of that funnel scale centrally, which need local investment, and what's the minimum viable resourcing per market.</p>
-    <p><strong>The core tension:</strong> every new market carries linear OPEX (Klaviyo, CW hires, pricing analysts, copywriters). We need each market to hit a critical revenue threshold for the unit economics to pay off. Below that threshold, we're burning cash to build infrastructure we can't yet monetise.</p>
+    <h2>Key Consideration</h2>
+    <p>Every new market carries a fixed amount of OPEX: Klaviyo account, TripleWhale account, Feedonomics feed, pricing analyst capacity, CW hires, and copywriter resource. We need to make sure each market hits a critical revenue threshold to justify this fixed investment.</p>
+    <p>The exact threshold needs validation with Finance, but the principle is clear: we should not turn on a market unless we have confidence it can reach the revenue level that covers its per-market cost base within a reasonable timeframe.</p>
 
-    <div class="open-q-box">
-      <div class="q-label">Open question for discussion</div>
-      <p>What is the minimum monthly revenue per market for OPEX to break even? Working assumption: ~&pound;500k/month. Needs validation with Finance.</p>
-    </div>
-
-    <div class="comment-list" data-section="topline"></div>
-    <div class="comment-form" data-section="topline">
+    <div class="comment-list" data-section="consideration"></div>
+    <div class="comment-form" data-section="consideration">
       <input type="text" placeholder="Your name" class="comment-author">
       <textarea placeholder="Add your comment..." class="comment-text-input"></textarea>
-      <button onclick="saveComment(this, 'topline')">Post</button>
+      <button onclick="saveComment(this, 'consideration')">Post</button>
       <button class="cancel-btn" onclick="toggleComment(this)">Cancel</button>
     </div>
   </div>
@@ -211,7 +161,7 @@
         <span class="pill pill-green">Germany live</span>
       </div>
       <div class="markets">Germany (live) + Austria + Switzerland</div>
-      <p style="font-size:13px;">~1,870 existing customers. 150+ DE customers with 3+ orders - proven demand despite poor historic experience. AT + CH serviced from NL warehouse. Same campaign structure, independent pricing. German-language cluster.</p>
+      <p style="font-size:13px;">~1,870 existing customers. 150+ DE customers with 3+ orders - proven demand. AT + CH serviced from NL warehouse. Same campaign structure, independent pricing. German-language cluster.</p>
     </div>
     <div class="cluster-card">
       <div style="display:flex; justify-content:space-between; align-items:center;">
@@ -219,7 +169,7 @@
         <span class="pill pill-amber">Next</span>
       </div>
       <div class="markets">Netherlands (lead) + Belgium</div>
-      <p style="font-size:13px;">Strong English proficiency may reduce localisation burden. Netherlands is a mature e-com market. Likely shared warehouse with DACH (NL). New language cluster - Dutch copywriting required.</p>
+      <p style="font-size:13px;">Strong English proficiency may reduce localisation burden. Netherlands is a mature e-com market. Shared warehouse with DACH (NL). New language cluster - Dutch copywriting required.</p>
     </div>
     <div class="cluster-card">
       <div style="display:flex; justify-content:space-between; align-items:center;">
@@ -227,7 +177,7 @@
         <span class="pill pill-amber">Next</span>
       </div>
       <div class="markets">France</div>
-      <p style="font-size:13px;">Large market, high wellness spend. French localisation is non-negotiable - low English e-com adoption. Regulatory nuances on supplements. New language cluster - French copywriting required.</p>
+      <p style="font-size:13px;">Large market, high wellness spend. French localisation is non-negotiable - low English e-com adoption. Regulatory nuances on supplements. New language cluster.</p>
     </div>
     <div class="cluster-card">
       <div style="display:flex; justify-content:space-between; align-items:center;">
@@ -235,7 +185,88 @@
         <span class="pill pill-blue">Later</span>
       </div>
       <div class="markets">Italy + (potential expansion)</div>
-      <p style="font-size:13px;">Growing wellness market. Italian localisation required. Supplement regulations differ. New language cluster - Italian copywriting required.</p>
+      <p style="font-size:13px;">Growing wellness market. Italian localisation required. Supplement regulations differ. New language cluster.</p>
+    </div>
+    <div class="cluster-card">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <h3>Cluster 5: Nordics</h3>
+        <span class="pill pill-blue">Later</span>
+      </div>
+      <div class="markets">TBC - likely Sweden / Denmark lead</div>
+      <p style="font-size:13px;">High purchasing power, strong wellness culture. High English proficiency may allow lighter localisation initially. Market selection to be confirmed.</p>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- LOCALISATION CHOICES -->
+  <div class="card" data-section="choices">
+    <button class="comment-btn" onclick="toggleComment(this)" title="Add comment">&#128172;</button>
+    <h2>Localisation Model: Design Choice</h2>
+    <p>For every new market, we are aiming to fully localise the customer experience across all five functions. This is the full list of what needs to happen per market:</p>
+
+    <table style="margin: 16px 0;">
+      <tr><th>Function</th><th>Localised?</th></tr>
+      <tr><td>Website</td><td><span class="tick">Yes</span></td></tr>
+      <tr><td>PPC (Paid Search)</td><td><span class="tick">Yes</span></td></tr>
+      <tr><td>Pricing</td><td><span class="tick">Yes</span></td></tr>
+      <tr><td>CRM / Retention</td><td><span class="tick">Yes</span></td></tr>
+      <tr><td>Customer Wellbeing</td><td><span class="tick">Yes</span></td></tr>
+    </table>
+
+    <p>However, there is an alternative approach worth considering. Rather than fully localising every market from day one, we could run a leaner model - particularly for markets adjacent to DACH - where we turn on the tap, let customers come, and localise progressively as volume justifies it.</p>
+
+    <h3 style="margin-top: 20px;">The two models</h3>
+
+    <table class="choice-table">
+      <tr>
+        <th style="text-align:left;">Function</th>
+        <th>Lean model<br><span style="font-weight:400; font-size:10px; text-transform:none;">German backbone, selective overlay</span></th>
+        <th>Full localisation<br><span style="font-weight:400; font-size:10px; text-transform:none;">Per-market investment</span></th>
+      </tr>
+      <tr>
+        <td><strong>Website</strong></td>
+        <td><span class="cross">German site</span><br><span style="font-size:11px; color:#888;">Traffic routed to .de</span></td>
+        <td><span class="tick">Localised per market</span><br><span style="font-size:11px; color:#888;">3-4 weeks per site</span></td>
+      </tr>
+      <tr>
+        <td><strong>PPC</strong></td>
+        <td><span class="tick">Turned on</span><br><span style="font-size:11px; color:#888;">Ads in local language, landing on .de</span></td>
+        <td><span class="tick">Turned on</span><br><span style="font-size:11px; color:#888;">Ads + local site</span></td>
+      </tr>
+      <tr>
+        <td><strong>Pricing</strong></td>
+        <td><span class="partial">German pricing or varied via feeds</span><br><span style="font-size:11px; color:#888;">Can localise pricing without localising site</span></td>
+        <td><span class="tick">Fully localised per market</span><br><span style="font-size:11px; color:#888;">Analyst capacity per cluster</span></td>
+      </tr>
+      <tr>
+        <td><strong>CRM / Retention</strong></td>
+        <td><span class="cross">No localisation</span><br><span style="font-size:11px; color:#888;">German flows only</span></td>
+        <td><span class="tick">Localised flows</span><br><span style="font-size:11px; color:#888;">Copywriter per language</span></td>
+      </tr>
+      <tr>
+        <td><strong>Customer Wellbeing</strong></td>
+        <td><span class="cross">Auto-translate / AI</span><br><span style="font-size:11px; color:#888;">Minimal human support</span></td>
+        <td><span class="tick">Native-language support</span><br><span style="font-size:11px; color:#888;">1-2 hires per cluster</span></td>
+      </tr>
+      <tr style="background: #111;">
+        <td><strong>Lift required</strong></td>
+        <td><span class="pill pill-green">Low</span></td>
+        <td><span class="pill pill-red">High</span></td>
+      </tr>
+    </table>
+
+    <div class="open-q-box">
+      <div class="q-label">Decision required</div>
+      <p>Which model do we run with? The lean model lets us test demand without heavy upfront investment. The full localisation model delivers the Healf-quality experience from day one but carries significantly more OPEX per market. We could also run a hybrid - lean for initial launch, progressively localise as each market proves out.</p>
+    </div>
+
+    <div class="comment-list" data-section="choices"></div>
+    <div class="comment-form" data-section="choices">
+      <input type="text" placeholder="Your name" class="comment-author">
+      <textarea placeholder="Add your comment..." class="comment-text-input"></textarea>
+      <button onclick="saveComment(this, 'choices')">Post</button>
+      <button class="cancel-btn" onclick="toggleComment(this)">Cancel</button>
     </div>
   </div>
 
@@ -243,7 +274,7 @@
 
   <!-- FUNCTIONS -->
   <h2>Function-by-Function Breakdown</h2>
-  <p>For each function: what can run centrally from London, what must be hired locally per market, and what can be outsourced as a one-time or ongoing external engagement.</p>
+  <p>For each function: what can run centrally from London, what must be hired locally per market, and what external providers or additional hires are needed.</p>
 
   <!-- 1. E-COM PRODUCT -->
   <div class="function-section">
@@ -254,45 +285,37 @@
         <div class="function-title">E-com Product (Website)</div>
         <span class="pill pill-red">Critical path</span>
       </div>
-      <p>The website is the bottleneck. Nothing else works until the localised site is live - PM can't run feeds, pricing can't set up SKUs, CRM can't build flows, CW can't service customers. This is the gate.</p>
+      <p>The website is the bottleneck. Nothing else can be actioned until the localised website is live: PM can't run feeds, pricing can't set up SKUs, CRM can't build flows, CW can't service customers. The localised site unlocks everything else - feed and PM campaign setup, SKU and pricing setup, CRM flows, and CW - all of which can then happen in parallel.</p>
 
       <div class="cle-grid">
         <div class="cle-col cle-central">
           <h4 style="color:#3D9C50;">Central</h4>
           <ul>
-            <li>Arman oversees rollout (20% of time per market)</li>
-            <li>Keep sites simple until &pound;1-1.5M/month</li>
-            <li>Template from Germany launch - each subsequent market should be faster</li>
+            <li>Arman spends 20-25% of his capacity overseeing international markets</li>
+            <li>Keep sites very simple, similar to Germany</li>
+            <li>Translate from German for DACH-adjacent markets</li>
+            <li>Each subsequent market will be broadly linear effort</li>
           </ul>
         </div>
         <div class="cle-col cle-local">
           <h4 style="color:#C89B2C;">Local hire</h4>
           <ul>
-            <li>None initially - centralised PM capacity</li>
+            <li>None - centralised PM capacity</li>
           </ul>
         </div>
         <div class="cle-col cle-external">
-          <h4 style="color:#508CDC;">External / hire</h4>
+          <h4 style="color:#508CDC;">Additional hire</h4>
           <ul>
-            <li><strong>Front-end engineer (full-time)</strong> - Seb replacement. This is the single most critical hire. Dedicated to localising and maintaining international domains</li>
-            <li>Additional PM capacity once any market hits &pound;1-1.5M/month</li>
+            <li><strong>Phil</strong> (front-end engineer, replacing Seb) - will spend the majority of his time getting localised websites live</li>
+            <li>Current estimate: <strong>3-4 weeks per localisation</strong>, can potentially be significantly fast-tracked with a great dev</li>
+            <li>Around EOY, may need additional PM capacity if we want to start running optimisations on international domains</li>
           </ul>
         </div>
       </div>
 
       <div class="risk-box">
         <div class="risk-label">Key risk</div>
-        <p>Without a dedicated front-end resource, website localisation timelines slip. Every week of delay pushes back PM launch, pricing setup, CRM flows, and CW readiness for that market. The front-end engineer is the single highest-leverage hire in this plan.</p>
-      </div>
-
-      <div class="dep-chain">
-        <div class="dep-step"><div class="step-label">Step 1</div><div class="step-name">Localised site live</div><div class="step-detail">Front-end eng</div></div>
-        <div class="dep-arrow">&rarr;</div>
-        <div class="dep-step"><div class="step-label">Step 2</div><div class="step-name">Feed + SKU setup</div><div class="step-detail">Unlocks PM + Pricing</div></div>
-        <div class="dep-arrow">&rarr;</div>
-        <div class="dep-step"><div class="step-label">Step 3</div><div class="step-name">CRM flows</div><div class="step-detail">Unlocks Retention</div></div>
-        <div class="dep-arrow">&rarr;</div>
-        <div class="dep-step"><div class="step-label">Step 4</div><div class="step-name">CW channels</div><div class="step-detail">Unlocks support</div></div>
+        <p>Making sure Phil is onboarded quickly and is a killer. He is the single most critical hire in this plan. Website localisation gates every other function for every market.</p>
       </div>
 
       <div class="comment-list" data-section="product"></div>
@@ -313,45 +336,40 @@
         <div class="function-number">2</div>
         <div class="function-title">Performance Marketing (Paid Search)</div>
       </div>
-      <p>Paid Search is the primary acquisition channel internationally. Paid Social is deprioritised until a market hits ~&pound;1M/month, at which point we may consider localised social.</p>
+      <p>Paid Search is the primary acquisition channel internationally. The same set of things need to be replicated across the five markets: Google account setup, campaign setup, feed optimisation, and TripleWhale tracking. This can all be managed centrally.</p>
 
       <div class="cle-grid">
         <div class="cle-col cle-central">
           <h4 style="color:#3D9C50;">Central</h4>
           <ul>
-            <li>Leo's team + <a href="https://trendingtrades.com" target="_blank">Trending Trades</a> manage campaigns</li>
-            <li>Campaign structure built per cluster (not per market). DACH runs one structure with different pricing for AT/CH</li>
-            <li>Budget management scales easily - not a constraint</li>
+            <li>Leo + Umair manage centrally</li>
+            <li>Trending Tides manages campaign setup - within a campaign setup we can run multiple prices across markets</li>
+            <li><strong>Additional hire: 1 dedicated PM EU Manager</strong>, reports to / works with Leo, provides central capacity to manage PPC across five markets</li>
           </ul>
         </div>
         <div class="cle-col cle-local">
           <h4 style="color:#C89B2C;">Local hire</h4>
           <ul>
-            <li>None needed initially</li>
+            <li>None</li>
           </ul>
         </div>
         <div class="cle-col cle-external">
           <h4 style="color:#508CDC;">External</h4>
           <ul>
-            <li><strong>Feed localisation</strong> - the critical dependency. Two options:</li>
-            <li><strong>Feedonomics</strong>: charges per feed. Costs multiply with each market. Proven but expensive at scale</li>
-            <li><strong>Tides</strong>: flat fee. Must keep them engaged for ongoing markets. More cost-effective at 4+ clusters</li>
-            <li>Local keyword research per language cluster</li>
-            <li>Translated ad copy per language cluster</li>
+            <li><strong>Feedonomics</strong> - feed localisation per market</li>
+            <li><strong>TripleWhale</strong> - additional account for tracking across every localised website</li>
+            <li><strong>Tides</strong> - flat fee, sequential rollout across campaigns</li>
+            <li>Tides will also lead deeper engagement with Google to set up accounts per market</li>
           </ul>
         </div>
       </div>
 
       <div class="insight-box">
         <div class="insight-label">Scaling advantage</div>
-        <p>PM scales relatively well centrally. Campaign structures are per-cluster (not per-country), so DACH is one structure. The main cost driver is feed localisation - the Feedonomics vs Tides decision becomes material at 4 clusters.</p>
+        <p>Scales well centrally. The same set of things (Google account setup, campaign setup, feed optimisation, TripleWhale tracking) need to be replicated across the five markets. All spend can be managed by one central PM EU Manager alongside Leo and Umair.</p>
       </div>
 
-      <table>
-        <tr><th>Feed provider</th><th>Pricing model</th><th>Cost at 4 clusters</th><th>Notes</th></tr>
-        <tr><td>Feedonomics</td><td>Per feed</td><td style="color:#C84E2C;">High (linear)</td><td>Proven, but costs multiply</td></tr>
-        <tr><td>Tides</td><td>Flat fee</td><td style="color:#3D9C50;">Lower (fixed)</td><td>Need to keep engaged; better at scale</td></tr>
-      </table>
+      <p style="margin-top: 16px; padding: 12px; background: #111; border-radius: 8px; font-size: 13px;"><strong>Paid Social</strong> is deprioritised until a market hits a critical threshold (~&pound;1-1.5M/month), at which point we may consider setting up a localised paid social operation.</p>
 
       <div class="comment-list" data-section="pm"></div>
       <div class="comment-form" data-section="pm">
@@ -370,52 +388,45 @@
       <div class="function-header">
         <div class="function-number">3</div>
         <div class="function-title">Pricing</div>
-        <span class="pill pill-red">Scaling risk</span>
       </div>
-      <p>Pricing is the function with the biggest scaling risk. The current process is analyst-intensive and doesn't have robust automation yet.</p>
+      <p>The current pricing process is analyst-intensive and highly manual.</p>
 
       <div class="cle-grid">
         <div class="cle-col cle-central">
           <h4 style="color:#3D9C50;">Central</h4>
           <ul>
-            <li>Anton leads DE pricing; Vinayak backfills UK</li>
-            <li>Akash continues scraper investment</li>
-            <li>Incoming data science hire to build intelligence layer (margin maximisation without losing conversion)</li>
-            <li>Central pricing framework / methodology</li>
+            <li>Anton leads the pricing function</li>
+            <li>Critical that Akash continues to build and improve the pricing scraper</li>
+            <li>Marginal effort to add additional URLs for different markets is low</li>
+            <li>Currency and interface handling may require slight differences to make execution easy for each analyst</li>
           </ul>
         </div>
         <div class="cle-col cle-local">
           <h4 style="color:#C89B2C;">Local hire</h4>
           <ul>
-            <li><strong>0.5-1 pricing analyst per cluster</strong> (depends on competitor overlap)</li>
-            <li>~1 analyst per 500 SKUs as a rough ratio</li>
+            <li><strong>0.5-1 pricing analyst per cluster</strong> depending on competitive overlap and number of SKUs</li>
+            <li>One analyst can roughly cover 500-700 SKUs (depends on order mix)</li>
+            <li>Currently for DACH: 0.5 analyst capacity initially</li>
           </ul>
         </div>
         <div class="cle-col cle-external">
-          <h4 style="color:#508CDC;">External</h4>
+          <h4 style="color:#508CDC;">Additional hire</h4>
           <ul>
-            <li>Scraper scaling (Akash / data science)</li>
+            <li><strong>AI / Data Scientist</strong> - to scale pricing experiments across multiple markets and optimise margin</li>
+            <li>This is distinct from the price-match scraper that Akash is building</li>
           </ul>
         </div>
       </div>
 
       <div class="risk-box">
-        <div class="risk-label">Key risk</div>
-        <p>At 4 clusters x 500+ SKUs each, the analyst headcount scales linearly (2-4 additional analysts). The competitive landscape is unknown for most markets - we don't yet know how much overlap there is between competitor sets. If competitors differ significantly per market, the analytical lift is higher. The data science hire and scraper investment are the path to bending this cost curve.</p>
+        <div class="risk-label">Key headcount risk</div>
+        <p>We'll need another 2-3 analysts to scale across all clusters. A big factor is the competitive overlap between markets - we don't currently have visibility on this. The data science hire and scraper investment are the paths to bending this cost curve and ensuring accuracy of pricing updates.</p>
       </div>
 
       <div class="open-q-box">
         <div class="q-label">Open question</div>
-        <p>How different is the competitor landscape market by market? Common comparators (iHerb, Amazon) likely exist everywhere, but local players may change the game. Needs market-by-market competitor mapping before we can right-size the analyst team.</p>
+        <p>How different are the competitive landscapes per market, and how should we structure the pricing function? Two options: <strong>one analyst per brand cluster, across multiple markets</strong> (deep brand expertise) or <strong>one analyst per market, across multiple brands</strong> (deep market expertise). The right answer likely depends on SKU count and competitive overlap.</p>
       </div>
-
-      <table>
-        <tr><th>Cluster</th><th>Est. SKUs</th><th>Analyst need</th><th>Status</th></tr>
-        <tr><td>DACH</td><td>500+</td><td>1 (Anton in place)</td><td><span class="pill pill-green">Active</span></td></tr>
-        <tr><td>Benelux</td><td>TBD</td><td>0.5-1</td><td><span class="pill pill-amber">To hire</span></td></tr>
-        <tr><td>France</td><td>TBD</td><td>0.5-1</td><td><span class="pill pill-amber">To hire</span></td></tr>
-        <tr><td>Southern Europe</td><td>TBD</td><td>0.5-1</td><td><span class="pill pill-amber">To hire</span></td></tr>
-      </table>
 
       <div class="comment-list" data-section="pricing"></div>
       <div class="comment-form" data-section="pricing">
@@ -435,38 +446,36 @@
         <div class="function-number">4</div>
         <div class="function-title">Retention / CRM</div>
       </div>
-      <p>CRM flows are the connective tissue. Having done Germany first, subsequent markets should be significantly easier - the templates, logic, and curation approach carry over. The main gap is localised copy.</p>
+      <p>Copy translation is the critical lift here. The copy needs to be fully localised - this is a one-time effort per market but also creates a brake every time we want to edit a flow. The advantage is that the curation angle is similar across markets, so all we need is translation effort rather than a rethink of the curation strategy.</p>
 
       <div class="cle-grid">
         <div class="cle-col cle-central">
           <h4 style="color:#3D9C50;">Central</h4>
           <ul>
-            <li>Holly leads flow setup, supported by agency</li>
-            <li>Germany template becomes the playbook - future markets are faster</li>
-            <li>Curation angle must be consistent across markets</li>
-            <li>Recharge setup per market (requires dev resource)</li>
+            <li>Holly leads all flow setup, supported by agency <strong>Yocto</strong></li>
+            <li>Future markets will be faster now that we have done this for Germany</li>
+            <li>Curation angle is consistent across markets - only translation needed, not curation effort</li>
           </ul>
         </div>
         <div class="cle-col cle-local">
           <h4 style="color:#C89B2C;">Local hire</h4>
           <ul>
-            <li><strong>Local copywriter per language cluster</strong> - this is the big gap. Not just translation but culturally adapted copy</li>
-            <li>Website localisation copy (shared with Product)</li>
+            <li><strong>1 local copywriter per language cluster</strong> - the critical gap</li>
           </ul>
         </div>
         <div class="cle-col cle-external">
           <h4 style="color:#508CDC;">External</h4>
           <ul>
-            <li>Klaviyo account per market (linear OPEX cost)</li>
-            <li>Agency support on flow builds</li>
-            <li>AI translation accelerates but doesn't replace native review</li>
+            <li><strong>Klaviyo</strong> - separate account per market</li>
+            <li><strong>Yocto</strong> agency support for admin tasks and flow setup</li>
+            <li><strong>Recharge</strong> - separate account per market</li>
           </ul>
         </div>
       </div>
 
       <div class="insight-box">
         <div class="insight-label">Scaling advantage</div>
-        <p>Germany is the hard one. Once the CRM architecture and flow templates are proven, each subsequent market is primarily a copywriting + localisation exercise. The strategic decisions (flow logic, timing, offers) are made once centrally.</p>
+        <p>Germany is the hard one. Now that the CRM architecture and flow templates are proven, each subsequent market is primarily a copywriting and translation exercise. The strategic decisions (flow logic, timing, offers, curation) are made once centrally.</p>
       </div>
 
       <div class="comment-list" data-section="retention"></div>
@@ -487,37 +496,43 @@
         <div class="function-number">5</div>
         <div class="function-title">Customer Wellbeing</div>
       </div>
-      <p>CW is non-negotiable - it's a core differentiator. Every language cluster needs a lead who can provide the Healf-quality customer experience in the local language. This scales linearly with markets.</p>
+      <p>CW is a core differentiator for Healf. Every language cluster needs quality service. There are two models to consider: a low-touch AI-assisted approach, or a fully localised intensive approach.</p>
+
+      <p><strong>Low-touch model:</strong> Outside of Germany, use AI translation to handle customer queries. The warehouse setup is similar across markets, so AI can effectively deflect a large share of standard queries. Lower cost, faster to scale.</p>
+
+      <p><strong>Intensive model:</strong> Full native-language CW support per market. Delivers the Healf-quality experience but carries significantly higher OPEX.</p>
 
       <div class="cle-grid">
         <div class="cle-col cle-central">
           <h4 style="color:#3D9C50;">Central</h4>
           <ul>
-            <li>Gorgias integrations per market (straightforward, need monitoring)</li>
-            <li>Central CW playbook and quality standards</li>
-            <li>Firas / Harriet set standards and train</li>
+            <li>Gorgias integration per market</li>
+            <li>Central CW playbook and policies</li>
+            <li>Firas / Harriet set standards and provide training resources</li>
+            <li>Dimitra supports training</li>
           </ul>
         </div>
         <div class="cle-col cle-local">
-          <h4 style="color:#C89B2C;">Local hire</h4>
+          <h4 style="color:#C89B2C;">Local hire (intensive model)</h4>
           <ul>
-            <li><strong>1 CW lead per language cluster</strong></li>
-            <li>Must be native-level in the market language</li>
-            <li>Scale capacity within each cluster as volume grows</li>
+            <li><strong>1-2 CW hires per language cluster</strong></li>
+            <li>Must have native-level proficiency in both English and local language</li>
+            <li>Scale capacity as business grows in each market</li>
           </ul>
         </div>
         <div class="cle-col cle-external">
-          <h4 style="color:#508CDC;">External</h4>
+          <h4 style="color:#508CDC;">Considerations</h4>
           <ul>
-            <li>AI translation can handle tier-1 queries initially</li>
-            <li>But wellbeing advice needs human, native-language delivery</li>
+            <li>As a % of revenue, CW costs may be higher if resource sits onshore vs. offshore</li>
+            <li>Hiring native speakers in traditional offshore centres (e.g. Philippines) will be challenging</li>
+            <li>Can explore other regions - potentially South America or Eastern Europe - where language speakers may be available at lower cost</li>
           </ul>
         </div>
       </div>
 
-      <div class="risk-box">
-        <div class="risk-label">Key constraint</div>
-        <p>CW hires are the hardest to compress. You can't centralise wellbeing advice across languages - customers need to feel understood in their language. Each new language cluster = at least one new hire. This is irreducible linear OPEX.</p>
+      <div class="open-q-box">
+        <div class="q-label">Decision required</div>
+        <p>Which CW model do we invest in? Low-touch with AI is cheaper and faster. Intensive is the Healf-quality experience. Could also stage it: low-touch at launch, upgrade to intensive once a market proves out.</p>
       </div>
 
       <div class="comment-list" data-section="cw"></div>
@@ -535,28 +550,27 @@
   <!-- RESOURCE SUMMARY -->
   <div class="card" data-section="resources">
     <button class="comment-btn" onclick="toggleComment(this)" title="Add comment">&#128172;</button>
-    <h2>Resource Summary: What We Need</h2>
+    <h2>Resource Summary</h2>
 
-    <h3>Hires required (all markets)</h3>
+    <h3>Hires</h3>
     <table>
-      <tr><th>Role</th><th>Type</th><th>Function</th><th>Quantity</th><th>Priority</th></tr>
-      <tr class="opex-row-external"><td><strong>Front-end engineer</strong></td><td>Full-time hire</td><td>Product</td><td>1</td><td><span class="pill pill-red">Critical - hire now</span></td></tr>
-      <tr class="opex-row-local"><td><strong>Pricing analyst</strong></td><td>Per cluster</td><td>Pricing</td><td>2-3 (beyond Anton)</td><td><span class="pill pill-amber">Hire per cluster launch</span></td></tr>
-      <tr class="opex-row-local"><td><strong>Copywriter</strong></td><td>Per language</td><td>Retention + Product</td><td>3 (Dutch, French, Italian)</td><td><span class="pill pill-amber">Hire per cluster launch</span></td></tr>
-      <tr class="opex-row-local"><td><strong>CW lead</strong></td><td>Per language</td><td>Customer Wellbeing</td><td>3 (Dutch, French, Italian)</td><td><span class="pill pill-amber">Hire per cluster launch</span></td></tr>
-      <tr class="opex-row-central"><td><strong>Data science</strong></td><td>Full-time hire</td><td>Pricing (central)</td><td>1</td><td><span class="pill pill-amber">In progress</span></td></tr>
+      <tr><th>Role</th><th>Quantity</th><th>Function</th><th>Status</th></tr>
+      <tr><td><strong>Front-end engineer (Phil)</strong></td><td>1</td><td>Product</td><td><span class="pill pill-green">Filled</span></td></tr>
+      <tr><td><strong>PM EU Manager</strong></td><td>1</td><td>Performance Marketing</td><td><span class="pill pill-amber">To hire</span></td></tr>
+      <tr><td><strong>Pricing analysts</strong></td><td>2-3</td><td>Pricing</td><td><span class="pill pill-amber">To hire per cluster</span></td></tr>
+      <tr><td><strong>Copywriters</strong></td><td>2-3</td><td>Retention + Product</td><td><span class="pill pill-amber">To hire per cluster</span></td></tr>
+      <tr><td><strong>CW leads</strong></td><td>2-3</td><td>Customer Wellbeing</td><td><span class="pill pill-amber">To hire per cluster</span></td></tr>
+      <tr><td><strong>AI / Data Scientist</strong></td><td>1</td><td>Pricing (central)</td><td><span class="pill pill-amber">To hire</span></td></tr>
     </table>
 
-    <h3 style="margin-top:24px;">Per-cluster OPEX (recurring)</h3>
+    <h3 style="margin-top:24px;">Key External Tools</h3>
     <table>
-      <tr><th>Cost item</th><th>Type</th><th>Est. per cluster</th></tr>
-      <tr><td>Klaviyo account</td><td>Tool</td><td>Scales with contacts</td></tr>
-      <tr><td>Gorgias / CW tooling</td><td>Tool</td><td>Scales with tickets</td></tr>
-      <tr><td>Feed localisation (Tides / Feedonomics)</td><td>External</td><td>Per feed or flat</td></tr>
-      <tr><td>Pricing analyst</td><td>Hire</td><td>0.5-1 FTE</td></tr>
-      <tr><td>Copywriter</td><td>Hire / freelance</td><td>0.5-1 FTE</td></tr>
-      <tr><td>CW lead</td><td>Hire</td><td>1 FTE</td></tr>
-      <tr><td>Recharge setup</td><td>Dev time (one-time)</td><td>Engineering sprint</td></tr>
+      <tr><th>Tool</th><th>Purpose</th><th>Cost model</th></tr>
+      <tr><td><strong>Klaviyo</strong></td><td>CRM / email per market</td><td>Per account, scales with contacts</td></tr>
+      <tr><td><strong>Recharge</strong></td><td>Subscriptions per market</td><td>Per account</td></tr>
+      <tr><td><strong>Wonderment</strong></td><td>Delivery tracking per market</td><td>Per account</td></tr>
+      <tr><td><strong>Feedonomics</strong></td><td>Feed localisation</td><td>Per feed</td></tr>
+      <tr><td><strong>TripleWhale</strong></td><td>Attribution / tracking per site</td><td>Per account</td></tr>
     </table>
 
     <div class="comment-list" data-section="resources"></div>
@@ -570,130 +584,25 @@
 
   <hr class="section-divider">
 
-  <!-- WHAT SCALES vs WHAT DOESN'T -->
-  <div class="card" data-section="scaling">
+  <!-- NEXT STEPS -->
+  <div class="card" data-section="nextsteps">
     <button class="comment-btn" onclick="toggleComment(this)" title="Add comment">&#128172;</button>
-    <h2>What Scales Centrally vs. What Scales Linearly</h2>
-    <p>This is the key insight for the discussion. Some functions get cheaper per-market as we add markets. Others cost the same every time.</p>
-
+    <h2>Next Steps</h2>
     <table>
-      <tr><th>Function</th><th>Scaling behaviour</th><th>Why</th></tr>
-      <tr>
-        <td><strong>E-com Product</strong></td>
-        <td><span class="pill pill-green">Improving</span></td>
-        <td>Germany is the hard one. Template, playbook, and learnings carry forward. Each subsequent site is faster. One front-end engineer can manage multiple domains.</td>
-      </tr>
-      <tr>
-        <td><strong>Performance Marketing</strong></td>
-        <td><span class="pill pill-green">Mostly central</span></td>
-        <td>Campaign structures are per-cluster. Leo's team + agency handle it centrally. Main scaling cost is feed localisation (solvable with Tides flat fee).</td>
-      </tr>
-      <tr>
-        <td><strong>Pricing</strong></td>
-        <td><span class="pill pill-red">Linear risk</span></td>
-        <td>~0.5-1 analyst per cluster. Scraper + data science can bend this curve over time, but near-term it's headcount-driven. Unknown competitor overlap adds uncertainty.</td>
-      </tr>
-      <tr>
-        <td><strong>Retention / CRM</strong></td>
-        <td><span class="pill pill-amber">Mixed</span></td>
-        <td>Flow logic is central (one-time). But copy must be localised per language = copywriter per cluster. Improving after Germany template is proven.</td>
-      </tr>
-      <tr>
-        <td><strong>Customer Wellbeing</strong></td>
-        <td><span class="pill pill-red">Linear</span></td>
-        <td>1 lead per language cluster, irreducible. You can't AI-translate wellbeing advice. This is the function that scales most linearly with markets.</td>
-      </tr>
+      <tr><th>#</th><th>Action</th><th>Detail</th></tr>
+      <tr><td>1</td><td><strong>Decide on localisation model</strong></td><td>Fully localised per market vs. lean model (German backbone + selective overlay). This is the most important decision - it drives everything else.</td></tr>
+      <tr><td>2</td><td><strong>Validate per-market OPEX threshold</strong></td><td>If we go full localisation, the linear OPEX per market needs to be tightly controlled. Validate the minimum revenue threshold with Finance.</td></tr>
+      <tr><td>3</td><td><strong>Competitive landscape mapping</strong></td><td>Understand how different the competitor set is per market. This drives pricing analyst headcount and the brand-vs-market analyst structure.</td></tr>
+      <tr><td>4</td><td><strong>Market sequencing</strong></td><td>Confirm which markets to open and when. Phil's throughput (~3-4 weeks per site) sets the pace.</td></tr>
+      <tr><td>5</td><td><strong>Copywriter model</strong></td><td>Likely project-based hires per language cluster. Define scope and timing.</td></tr>
+      <tr><td>6</td><td><strong>CW investment level</strong></td><td>Low-touch (AI) vs. intensive (native hires) per market. Could stage this - start low-touch, upgrade as markets prove out.</td></tr>
     </table>
 
-    <div class="comment-list" data-section="scaling"></div>
-    <div class="comment-form" data-section="scaling">
+    <div class="comment-list" data-section="nextsteps"></div>
+    <div class="comment-form" data-section="nextsteps">
       <input type="text" placeholder="Your name" class="comment-author">
       <textarea placeholder="Add your comment..." class="comment-text-input"></textarea>
-      <button onclick="saveComment(this, 'scaling')">Post</button>
-      <button class="cancel-btn" onclick="toggleComment(this)">Cancel</button>
-    </div>
-  </div>
-
-  <hr class="section-divider">
-
-  <!-- SEQUENCING -->
-  <div class="card" data-section="sequencing">
-    <button class="comment-btn" onclick="toggleComment(this)" title="Add comment">&#128172;</button>
-    <h2>Recommended Sequencing</h2>
-
-    <h3>Per-cluster launch sequence (functions)</h3>
-    <div class="dep-chain">
-      <div class="dep-step" style="border-color:#3D9C50;">
-        <div class="step-label">Week 1-3</div>
-        <div class="step-name">Product</div>
-        <div class="step-detail">Localised site live</div>
-      </div>
-      <div class="dep-arrow">&rarr;</div>
-      <div class="dep-step">
-        <div class="step-label">Week 2-4</div>
-        <div class="step-name">PM + Pricing</div>
-        <div class="step-detail">Feed, campaigns, SKU pricing</div>
-      </div>
-      <div class="dep-arrow">&rarr;</div>
-      <div class="dep-step">
-        <div class="step-label">Week 3-5</div>
-        <div class="step-name">Retention</div>
-        <div class="step-detail">CRM flows, Recharge</div>
-      </div>
-      <div class="dep-arrow">&rarr;</div>
-      <div class="dep-step">
-        <div class="step-label">Week 4-6</div>
-        <div class="step-name">CW</div>
-        <div class="step-detail">Support channels live</div>
-      </div>
-    </div>
-
-    <h3 style="margin-top:24px;">Cluster rollout timeline</h3>
-    <table>
-      <tr><th>Cluster</th><th>Target launch</th><th>Pre-requisites</th><th>Key blocker</th></tr>
-      <tr><td><strong>DACH</strong> (AT + CH)</td><td>Q3 2026</td><td>DE live, NL warehouse confirmed for AT/CH</td><td>Pricing setup for AT/CH</td></tr>
-      <tr><td><strong>Benelux</strong></td><td>Q3/Q4 2026</td><td>Dutch copywriter, site localisation</td><td>Front-end engineer availability</td></tr>
-      <tr><td><strong>France</strong></td><td>Q4 2026</td><td>French copywriter, CW lead, site localisation</td><td>Front-end engineer + regulatory review</td></tr>
-      <tr><td><strong>Southern Europe</strong></td><td>Q4 2026 / Q1 2027</td><td>Italian copywriter, CW lead, site localisation</td><td>Capacity - depends on how fast prior clusters ramp</td></tr>
-    </table>
-
-    <div class="open-q-box">
-      <div class="q-label">Gating decision</div>
-      <p>Do we launch clusters sequentially (lower risk, slower) or overlap them (faster, but front-end engineer becomes the bottleneck)? With one front-end engineer, we can realistically launch 1 new cluster every 4-6 weeks. Overlapping requires either a second engineer or accepting slower per-market quality.</p>
-    </div>
-
-    <div class="comment-list" data-section="sequencing"></div>
-    <div class="comment-form" data-section="sequencing">
-      <input type="text" placeholder="Your name" class="comment-author">
-      <textarea placeholder="Add your comment..." class="comment-text-input"></textarea>
-      <button onclick="saveComment(this, 'sequencing')">Post</button>
-      <button class="cancel-btn" onclick="toggleComment(this)">Cancel</button>
-    </div>
-  </div>
-
-  <hr class="section-divider">
-
-  <!-- OPEN QUESTIONS -->
-  <div class="card" data-section="openqs">
-    <button class="comment-btn" onclick="toggleComment(this)" title="Add comment">&#128172;</button>
-    <h2>Open Questions for Discussion</h2>
-
-    <table>
-      <tr><th>#</th><th>Question</th><th>Owner</th><th>Impact</th></tr>
-      <tr><td>1</td><td><strong>What is the minimum revenue per market for OPEX break-even?</strong> Working assumption ~&pound;500k/month. Needs Finance validation.</td><td>Adrian / Siddhansh</td><td><span class="pill pill-red">High</span></td></tr>
-      <tr><td>2</td><td><strong>Feedonomics vs Tides?</strong> Per-feed vs flat fee. Decision needed before Cluster 2 launch.</td><td>Leo / Siddhansh</td><td><span class="pill pill-amber">Medium</span></td></tr>
-      <tr><td>3</td><td><strong>Competitor landscape mapping per market.</strong> How different is the competitor set? Drives pricing analyst headcount.</td><td>Anton / data science</td><td><span class="pill pill-red">High</span></td></tr>
-      <tr><td>4</td><td><strong>Sequential vs overlapping cluster launches?</strong> One front-end engineer = ~1 cluster per 4-6 weeks. Do we hire a second?</td><td>Siddhansh / Hamza</td><td><span class="pill pill-red">High</span></td></tr>
-      <tr><td>5</td><td><strong>Paid Social trigger point.</strong> Confirmed at ~&pound;1M/month per market. At that point, do we need local social or can central team manage?</td><td>Leo / Siddhansh</td><td><span class="pill pill-amber">Medium</span></td></tr>
-      <tr><td>6</td><td><strong>Copywriter model - hire or freelance?</strong> Full-time per language vs freelance pool. Impacts speed and cost.</td><td>Siddhansh</td><td><span class="pill pill-amber">Medium</span></td></tr>
-      <tr><td>7</td><td><strong>Shared resources across clusters?</strong> Can a CW lead cover two markets (e.g. NL + DE if bilingual)? Harder in practice but worth exploring.</td><td>Firas / Harriet</td><td><span class="pill pill-amber">Medium</span></td></tr>
-    </table>
-
-    <div class="comment-list" data-section="openqs"></div>
-    <div class="comment-form" data-section="openqs">
-      <input type="text" placeholder="Your name" class="comment-author">
-      <textarea placeholder="Add your comment..." class="comment-text-input"></textarea>
-      <button onclick="saveComment(this, 'openqs')">Post</button>
+      <button onclick="saveComment(this, 'nextsteps')">Post</button>
       <button class="cancel-btn" onclick="toggleComment(this)">Cancel</button>
     </div>
   </div>
@@ -709,127 +618,47 @@
 </div>
 
 <script>
-// Comment system - persisted in localStorage
 const STORAGE_KEY = 'healf-intl-scaling-comments';
-
-function getComments() {
-  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
-  catch { return {}; }
-}
-
-function setComments(comments) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(comments));
-}
-
-function toggleComment(btn) {
-  const card = btn.closest('.card');
-  const form = card.querySelector('.comment-form');
-  form.classList.toggle('active');
-  if (form.classList.contains('active')) {
-    form.querySelector('.comment-author').focus();
-  }
-}
-
+function getComments() { try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; } catch { return {}; } }
+function setComments(c) { localStorage.setItem(STORAGE_KEY, JSON.stringify(c)); }
+function toggleComment(btn) { const card = btn.closest('.card'); const form = card.querySelector('.comment-form'); form.classList.toggle('active'); if (form.classList.contains('active')) form.querySelector('.comment-author').focus(); }
 function saveComment(btn, section) {
   const card = btn.closest('.card');
   const author = card.querySelector('.comment-author').value.trim();
   const text = card.querySelector('.comment-text-input').value.trim();
   if (!author || !text) return;
-
   const comments = getComments();
   if (!comments[section]) comments[section] = [];
-  comments[section].push({
-    author: author,
-    text: text,
-    timestamp: new Date().toISOString()
-  });
+  comments[section].push({ author, text, timestamp: new Date().toISOString() });
   setComments(comments);
-
-  // Clear inputs
   card.querySelector('.comment-author').value = '';
   card.querySelector('.comment-text-input').value = '';
   card.querySelector('.comment-form').classList.remove('active');
-
   renderComments(section);
 }
-
 function renderComments(section) {
   const comments = getComments();
   const list = document.querySelector(`.comment-list[data-section="${section}"]`);
   if (!list) return;
-
-  const sectionComments = comments[section] || [];
-  if (sectionComments.length === 0) {
-    list.innerHTML = '';
-    return;
-  }
-
-  list.innerHTML = sectionComments.map((c, i) => {
-    const date = new Date(c.timestamp);
-    const dateStr = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }) + ' ' + date.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
-    return `<div class="comment-item">
-      <div class="comment-meta"><strong>${escapeHtml(c.author)}</strong> - ${dateStr}
-        <span style="cursor:pointer; float:right; color:#5C5C5C;" onclick="deleteComment('${section}', ${i})" title="Delete">&times;</span>
-      </div>
-      <div class="comment-text">${escapeHtml(c.text)}</div>
-    </div>`;
+  const sc = comments[section] || [];
+  if (!sc.length) { list.innerHTML = ''; return; }
+  list.innerHTML = sc.map((c, i) => {
+    const d = new Date(c.timestamp);
+    const ds = d.toLocaleDateString('en-GB', { day:'numeric', month:'short' }) + ' ' + d.toLocaleTimeString('en-GB', { hour:'2-digit', minute:'2-digit' });
+    return `<div class="comment-item"><div class="comment-meta"><strong>${esc(c.author)}</strong> - ${ds}<span style="cursor:pointer;float:right;color:#5C5C5C;" onclick="delComment('${section}',${i})" title="Delete">&times;</span></div><div class="comment-text">${esc(c.text)}</div></div>`;
   }).join('');
 }
-
-function deleteComment(section, index) {
-  const comments = getComments();
-  if (comments[section]) {
-    comments[section].splice(index, 1);
-    setComments(comments);
-    renderComments(section);
-  }
-}
-
+function delComment(s, i) { const c = getComments(); if (c[s]) { c[s].splice(i, 1); setComments(c); renderComments(s); } }
 function exportComments() {
-  const comments = getComments();
-  const sections = Object.keys(comments);
-  if (sections.length === 0) { alert('No comments to export.'); return; }
-
-  let output = 'INTERNATIONAL SCALING PLAN - COMMENTS EXPORT\n';
-  output += '='.repeat(50) + '\n';
-  output += 'Exported: ' + new Date().toLocaleString('en-GB') + '\n\n';
-
-  sections.forEach(section => {
-    if (comments[section].length === 0) return;
-    output += `\n--- ${section.toUpperCase()} ---\n`;
-    comments[section].forEach(c => {
-      const date = new Date(c.timestamp);
-      const dateStr = date.toLocaleDateString('en-GB') + ' ' + date.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
-      output += `\n[${c.author}] (${dateStr})\n${c.text}\n`;
-    });
-  });
-
-  const blob = new Blob([output], { type: 'text/plain' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'intl-scaling-comments-' + new Date().toISOString().slice(0,10) + '.txt';
-  a.click();
-  URL.revokeObjectURL(url);
+  const c = getComments(); const ss = Object.keys(c);
+  if (!ss.length) { alert('No comments to export.'); return; }
+  let o = 'INTERNATIONAL SCALING PLAN - COMMENTS\n' + '='.repeat(50) + '\nExported: ' + new Date().toLocaleString('en-GB') + '\n';
+  ss.forEach(s => { if (!c[s].length) return; o += `\n--- ${s.toUpperCase()} ---\n`; c[s].forEach(x => { const d = new Date(x.timestamp); o += `\n[${x.author}] (${d.toLocaleDateString('en-GB')} ${d.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'})})\n${x.text}\n`; }); });
+  const b = new Blob([o], { type: 'text/plain' }); const u = URL.createObjectURL(b); const a = document.createElement('a'); a.href = u; a.download = 'intl-scaling-comments-' + new Date().toISOString().slice(0,10) + '.txt'; a.click(); URL.revokeObjectURL(u);
 }
-
-function clearAllComments() {
-  if (confirm('Clear all comments? This cannot be undone.')) {
-    localStorage.removeItem(STORAGE_KEY);
-    document.querySelectorAll('.comment-list').forEach(list => list.innerHTML = '');
-  }
-}
-
-function escapeHtml(str) {
-  const div = document.createElement('div');
-  div.textContent = str;
-  return div.innerHTML;
-}
-
-// Render existing comments on load
-document.addEventListener('DOMContentLoaded', () => {
-  ['topline', 'product', 'pm', 'pricing', 'retention', 'cw', 'resources', 'scaling', 'sequencing', 'openqs'].forEach(renderComments);
-});
+function clearAllComments() { if (confirm('Clear all comments?')) { localStorage.removeItem(STORAGE_KEY); document.querySelectorAll('.comment-list').forEach(l => l.innerHTML = ''); } }
+function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+document.addEventListener('DOMContentLoaded', () => { ['consideration','choices','product','pm','pricing','retention','cw','resources','nextsteps'].forEach(renderComments); });
 </script>
 
 </body>

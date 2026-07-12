@@ -141,10 +141,21 @@
     h1 { font-size: 26px; }
     body { padding: 32px 16px 60px; }
   }
+  .doc-tabs { display: flex; gap: 8px; margin-bottom: 36px; border-bottom: 1px solid #2A2A2A; }
+  .doc-tab { padding: 12px 20px 11px; font-size: 14px; color: #888; text-decoration: none; border: 1px solid transparent; border-bottom: none; border-radius: 10px 10px 0 0; display: flex; flex-direction: column; gap: 2px; }
+  .doc-tab .tab-date { font-size: 11px; color: #5C5C5C; }
+  .doc-tab:hover { color: #C8C8C8; text-decoration: none; }
+  .doc-tab.active { color: #fff; background: #1A1A1A; border-color: #2A2A2A; position: relative; top: 1px; }
+  .doc-tab.active .tab-date { color: #888; }
 </style>
 </head>
 <body>
 <div class="wrap">
+<div class="doc-tabs">
+  <a class="doc-tab" href="/"><span>International Scaling Plan</span><span class="tab-date">7 Jun 2026</span></a>
+  <a class="doc-tab active" href="/lestat-siddhansh-1-1.html"><span>NC Big Bets &middot; Lestat 1:1</span><span class="tab-date">12 Jul 2026</span></a>
+</div>
+
 
   <div class="kicker">Trading · New Customer Strategy · Q3 2026</div>
   <h1>NC Big Bets</h1>

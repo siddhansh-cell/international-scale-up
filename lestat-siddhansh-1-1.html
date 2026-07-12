@@ -7,8 +7,8 @@
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    background: #000;
-    color: #fff;
+    background: #FFFFFF;
+    color: #111;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.55;
     padding: 48px 32px 80px;
@@ -16,88 +16,88 @@
   .wrap { max-width: 1360px; margin: 0 auto; }
 
   /* Header */
-  .kicker { color: #888; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
+  .kicker { color: #6E6E6E; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
   h1 { font-size: 38px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 8px; }
-  .subtitle { color: #C8C8C8; font-size: 18px; margin-bottom: 6px; }
-  .meta { color: #5C5C5C; font-size: 13px; margin-bottom: 32px; }
+  .subtitle { color: #3D3D3D; font-size: 18px; margin-bottom: 6px; }
+  .meta { color: #8A8A8A; font-size: 13px; margin-bottom: 32px; }
 
   /* Quote */
   .quote {
     border-left: 3px solid #3D9C50;
-    background: #1A1A1A;
+    background: #FAFAF8;
     border-radius: 0 10px 10px 0;
     padding: 20px 26px;
     margin: 0 0 44px;
     font-size: 16px;
-    color: #C8C8C8;
+    color: #3D3D3D;
     font-style: italic;
     max-width: 1000px;
   }
-  .quote .attr { display: block; margin-top: 10px; font-style: normal; color: #888; font-size: 13px; }
+  .quote .attr { display: block; margin-top: 10px; font-style: normal; color: #6E6E6E; font-size: 13px; }
 
   /* Section headers */
   h2 { font-size: 23px; font-weight: 700; margin: 52px 0 18px; letter-spacing: -0.3px; }
-  h2 .num { color: #3D9C50; margin-right: 8px; }
-  p.body { color: #C8C8C8; font-size: 15px; margin-bottom: 14px; max-width: 1000px; }
-  p.body strong { color: #fff; }
+  h2 .num { color: #2E7D40; margin-right: 8px; }
+  p.body { color: #3D3D3D; font-size: 15px; margin-bottom: 14px; max-width: 1000px; }
+  p.body strong { color: #111; }
 
   /* Section 1: gap layout — cards left, stack right */
   .gap-layout { display: grid; grid-template-columns: 320px 1fr; gap: 20px; align-items: start; }
   .gap-cards { display: flex; flex-direction: column; gap: 12px; }
   .gap-card {
-    background: #1A1A1A; border: 1px solid #2A2A2A; border-radius: 12px;
+    background: #FAFAF8; border: 1px solid #E4E4E0; border-radius: 12px;
     padding: 18px 22px;
   }
-  .gap-card .label { color: #888; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+  .gap-card .label { color: #6E6E6E; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
   .gap-card .value { font-size: 30px; font-weight: 700; }
-  .gap-card .note { color: #5C5C5C; font-size: 12px; margin-top: 4px; }
-  .green { color: #3D9C50; }
-  .red { color: #C84E2C; }
-  .amber { color: #C89B2C; }
+  .gap-card .note { color: #8A8A8A; font-size: 12px; margin-top: 4px; }
+  .green { color: #2E7D40; }
+  .red { color: #B0431F; }
+  .amber { color: #A07E1C; }
 
   /* Gap stack */
   .stack-row {
     display: flex; align-items: center; gap: 16px;
-    background: #1A1A1A; border: 1px solid #2A2A2A; border-radius: 10px;
+    background: #FAFAF8; border: 1px solid #E4E4E0; border-radius: 10px;
     padding: 16px 20px; margin-bottom: 10px;
   }
   .stack-row .pill {
     flex-shrink: 0; min-width: 130px; text-align: center;
     border-radius: 999px; padding: 5px 12px; font-size: 13px; font-weight: 700;
   }
-  .pill-green { background: rgba(61,156,80,0.15); color: #3D9C50; border: 1px solid rgba(61,156,80,0.4); }
-  .pill-amber { background: rgba(200,155,44,0.15); color: #C89B2C; border: 1px solid rgba(200,155,44,0.4); }
-  .pill-red { background: rgba(200,78,44,0.15); color: #C84E2C; border: 1px solid rgba(200,78,44,0.4); }
-  .stack-row .desc { color: #C8C8C8; font-size: 14px; }
-  .stack-row .desc strong { color: #fff; }
+  .pill-green { background: rgba(61,156,80,0.15); color: #2E7D40; border: 1px solid rgba(61,156,80,0.4); }
+  .pill-amber { background: rgba(200,155,44,0.15); color: #A07E1C; border: 1px solid rgba(200,155,44,0.4); }
+  .pill-red { background: rgba(200,78,44,0.15); color: #B0431F; border: 1px solid rgba(200,78,44,0.4); }
+  .stack-row .desc { color: #3D3D3D; font-size: 14px; }
+  .stack-row .desc strong { color: #111; }
   .stack-row.hole { border-color: rgba(200,78,44,0.5); }
 
   /* Bet cards — 2x2 grid */
   .bets-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
   .bet {
-    background: #1A1A1A; border: 1px solid #2A2A2A; border-radius: 14px;
+    background: #FAFAF8; border: 1px solid #E4E4E0; border-radius: 14px;
     padding: 26px 28px;
     display: flex; flex-direction: column;
   }
   .bet-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 4px; }
   .bet h3 { font-size: 19px; font-weight: 700; }
-  .bet h3 .bnum { color: #3D9C50; }
-  .owner { color: #888; font-size: 13px; }
-  .thesis { color: #fff; font-size: 15px; font-weight: 600; margin: 10px 0 12px; }
+  .bet h3 .bnum { color: #2E7D40; }
+  .owner { color: #6E6E6E; font-size: 13px; }
+  .thesis { color: #111; font-size: 15px; font-weight: 600; margin: 10px 0 12px; }
   .bet ul { list-style: none; margin: 0 0 4px; }
-  .bet li { color: #C8C8C8; font-size: 14px; padding: 4px 0 4px 22px; position: relative; }
-  .bet li::before { content: "–"; position: absolute; left: 6px; color: #3D9C50; }
-  .bet li strong { color: #fff; }
+  .bet li { color: #3D3D3D; font-size: 14px; padding: 4px 0 4px 22px; position: relative; }
+  .bet li::before { content: "–"; position: absolute; left: 6px; color: #2E7D40; }
+  .bet li strong { color: #111; }
   .evidence-label, .action-label {
     display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px;
-    color: #5C5C5C; margin: 14px 0 6px;
+    color: #8A8A8A; margin: 14px 0 6px;
   }
   .fund-tag {
     display: inline-block; margin-top: auto; padding-top: 16px;
   }
   .fund-tag span {
     background: rgba(61,156,80,0.1); border: 1px solid rgba(61,156,80,0.3);
-    color: #3D9C50; font-size: 12px; font-weight: 600;
+    color: #2E7D40; font-size: 12px; font-weight: 600;
     border-radius: 6px; padding: 5px 10px;
   }
 
@@ -107,27 +107,27 @@
 
   /* Funding table */
   table { width: 100%; border-collapse: collapse; margin: 16px 0; }
-  th { text-align: left; color: #888; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; padding: 10px 14px; border-bottom: 1px solid #2A2A2A; }
-  td { color: #C8C8C8; font-size: 14px; padding: 12px 14px; border-bottom: 1px solid #1F1F1F; }
-  td strong { color: #fff; }
+  th { text-align: left; color: #6E6E6E; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; padding: 10px 14px; border-bottom: 1px solid #E4E4E0; }
+  td { color: #3D3D3D; font-size: 14px; padding: 12px 14px; border-bottom: 1px solid #ECECE9; }
+  td strong { color: #111; }
 
   /* Asks */
   .asks { margin-top: 16px; }
   .ask {
     display: flex; gap: 16px; align-items: flex-start;
-    background: #1A1A1A; border: 1px solid #2A2A2A; border-radius: 10px;
+    background: #FAFAF8; border: 1px solid #E4E4E0; border-radius: 10px;
     padding: 16px 20px; margin-bottom: 10px;
   }
   .ask .n {
     flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
-    background: #3D9C50; color: #000; font-weight: 700; font-size: 14px;
+    background: #3D9C50; color: #fff; font-weight: 700; font-size: 14px;
     display: flex; align-items: center; justify-content: center;
   }
-  .ask .t { color: #C8C8C8; font-size: 14px; padding-top: 3px; }
-  .ask .t strong { color: #fff; }
+  .ask .t { color: #3D3D3D; font-size: 14px; padding-top: 3px; }
+  .ask .t strong { color: #111; }
 
   /* Footnote */
-  .footnote { color: #5C5C5C; font-size: 12px; margin-top: 56px; border-top: 1px solid #1F1F1F; padding-top: 16px; }
+  .footnote { color: #8A8A8A; font-size: 12px; margin-top: 56px; border-top: 1px solid #ECECE9; padding-top: 16px; }
 
   @media (max-width: 1100px) {
     .bets-grid { grid-template-columns: 1fr; }
@@ -141,12 +141,12 @@
     h1 { font-size: 26px; }
     body { padding: 32px 16px 60px; }
   }
-  .doc-tabs { display: flex; gap: 8px; margin-bottom: 36px; border-bottom: 1px solid #2A2A2A; }
-  .doc-tab { padding: 12px 20px 11px; font-size: 14px; color: #888; text-decoration: none; border: 1px solid transparent; border-bottom: none; border-radius: 10px 10px 0 0; display: flex; flex-direction: column; gap: 2px; }
-  .doc-tab .tab-date { font-size: 11px; color: #5C5C5C; }
-  .doc-tab:hover { color: #C8C8C8; text-decoration: none; }
-  .doc-tab.active { color: #fff; background: #1A1A1A; border-color: #2A2A2A; position: relative; top: 1px; }
-  .doc-tab.active .tab-date { color: #888; }
+  .doc-tabs { display: flex; gap: 8px; margin-bottom: 36px; border-bottom: 1px solid #E4E4E0; }
+  .doc-tab { padding: 12px 20px 11px; font-size: 14px; color: #6E6E6E; text-decoration: none; border: 1px solid transparent; border-bottom: none; border-radius: 10px 10px 0 0; display: flex; flex-direction: column; gap: 2px; }
+  .doc-tab .tab-date { font-size: 11px; color: #8A8A8A; }
+  .doc-tab:hover { color: #3D3D3D; text-decoration: none; }
+  .doc-tab.active { color: #111; background: #FAFAF8; border-color: #E4E4E0; position: relative; top: 1px; }
+  .doc-tab.active .tab-date { color: #6E6E6E; }
 </style>
 </head>
 <body>
@@ -173,12 +173,12 @@
     <div class="gap-cards">
       <div class="gap-card">
         <div class="label">Current run rate</div>
-        <div class="value">~8&ndash;8.5k<span style="font-size:15px; color:#888;">/wk</span></div>
+        <div class="value">~8&ndash;8.5k<span style="font-size:15px; color:#6E6E6E;">/wk</span></div>
         <div class="note">≈ 34&ndash;36k NCs/month</div>
       </div>
       <div class="gap-card">
         <div class="label">Needed for 45k/mo</div>
-        <div class="value">~10k<span style="font-size:15px; color:#888;">/wk</span></div>
+        <div class="value">~10k<span style="font-size:15px; color:#6E6E6E;">/wk</span></div>
         <div class="note">September exit target</div>
       </div>
       <div class="gap-card">

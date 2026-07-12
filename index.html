@@ -6,86 +6,86 @@
 <title>International Scaling Plan - Trading | Healf</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: #000; color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; padding: 40px 20px; }
+  body { background: #FFFFFF; color: #111; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; padding: 40px 20px; }
   .container { max-width: 960px; margin: 0 auto; }
   h1 { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
-  h2 { font-size: 22px; font-weight: 600; margin-bottom: 16px; color: #fff; border-bottom: 1px solid #2A2A2A; padding-bottom: 8px; }
-  h3 { font-size: 17px; font-weight: 600; margin-bottom: 10px; color: #C8C8C8; }
-  h4 { font-size: 14px; font-weight: 600; margin-bottom: 6px; color: #888; text-transform: uppercase; letter-spacing: 0.5px; }
-  p { color: #C8C8C8; margin-bottom: 12px; font-size: 15px; }
-  a { color: #3D9C50; text-decoration: none; }
+  h2 { font-size: 22px; font-weight: 600; margin-bottom: 16px; color: #111; border-bottom: 1px solid #E4E4E0; padding-bottom: 8px; }
+  h3 { font-size: 17px; font-weight: 600; margin-bottom: 10px; color: #3D3D3D; }
+  h4 { font-size: 14px; font-weight: 600; margin-bottom: 6px; color: #6E6E6E; text-transform: uppercase; letter-spacing: 0.5px; }
+  p { color: #3D3D3D; margin-bottom: 12px; font-size: 15px; }
+  a { color: #2E7D40; text-decoration: none; }
   a:hover { text-decoration: underline; }
-  .card { background: #1A1A1A; border: 1px solid #2A2A2A; border-radius: 12px; padding: 24px; margin-bottom: 20px; position: relative; }
-  .hero { background: #1A1A1A; border: 1px solid #2A2A2A; border-radius: 16px; padding: 32px; margin-bottom: 32px; }
-  .hero-question { font-size: 18px; color: #C89B2C; font-style: italic; margin: 16px 0; padding: 16px; background: rgba(200,155,44,0.08); border-left: 3px solid #C89B2C; border-radius: 0 8px 8px 0; }
+  .card { background: #FAFAF8; border: 1px solid #E4E4E0; border-radius: 12px; padding: 24px; margin-bottom: 20px; position: relative; }
+  .hero { background: #FAFAF8; border: 1px solid #E4E4E0; border-radius: 16px; padding: 32px; margin-bottom: 32px; }
+  .hero-question { font-size: 18px; color: #A07E1C; font-style: italic; margin: 16px 0; padding: 16px; background: rgba(200,155,44,0.08); border-left: 3px solid #A07E1C; border-radius: 0 8px 8px 0; }
   .hero-meta { display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap; }
-  .hero-meta-item { font-size: 13px; color: #888; }
-  .hero-meta-item strong { color: #C8C8C8; }
+  .hero-meta-item { font-size: 13px; color: #6E6E6E; }
+  .hero-meta-item strong { color: #3D3D3D; }
   .pill { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; }
-  .pill-green { background: rgba(61,156,80,0.15); color: #3D9C50; }
-  .pill-red { background: rgba(200,78,44,0.15); color: #C84E2C; }
-  .pill-amber { background: rgba(200,155,44,0.15); color: #C89B2C; }
-  .pill-blue { background: rgba(80,140,220,0.15); color: #508CDC; }
+  .pill-green { background: rgba(61,156,80,0.15); color: #2E7D40; }
+  .pill-red { background: rgba(200,78,44,0.15); color: #B0431F; }
+  .pill-amber { background: rgba(200,155,44,0.15); color: #A07E1C; }
+  .pill-blue { background: rgba(80,140,220,0.15); color: #3B6FC4; }
   table { width: 100%; border-collapse: collapse; margin-bottom: 16px; font-size: 14px; }
-  th { background: #111; color: #888; font-weight: 600; text-transform: uppercase; font-size: 11px; letter-spacing: 0.5px; padding: 10px 12px; text-align: left; border-bottom: 1px solid #2A2A2A; }
-  td { padding: 10px 12px; border-bottom: 1px solid #1A1A1A; color: #C8C8C8; vertical-align: top; }
-  tr:hover td { background: rgba(255,255,255,0.02); }
+  th { background: #F4F4F1; color: #6E6E6E; font-weight: 600; text-transform: uppercase; font-size: 11px; letter-spacing: 0.5px; padding: 10px 12px; text-align: left; border-bottom: 1px solid #E4E4E0; }
+  td { padding: 10px 12px; border-bottom: 1px solid #ECECE9; color: #3D3D3D; vertical-align: top; }
+  tr:hover td { background: rgba(0,0,0,0.03); }
   .summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
-  .summary-stat { background: #1A1A1A; border: 1px solid #2A2A2A; border-radius: 10px; padding: 16px; text-align: center; }
+  .summary-stat { background: #FAFAF8; border: 1px solid #E4E4E0; border-radius: 10px; padding: 16px; text-align: center; }
   .summary-stat .number { font-size: 28px; font-weight: 700; }
-  .summary-stat .label { font-size: 12px; color: #888; margin-top: 4px; }
+  .summary-stat .label { font-size: 12px; color: #6E6E6E; margin-top: 4px; }
   .cluster-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 24px; }
-  .cluster-card { background: #1A1A1A; border: 1px solid #2A2A2A; border-radius: 10px; padding: 20px; }
-  .cluster-card h3 { margin-bottom: 6px; color: #fff; }
-  .cluster-card .markets { font-size: 13px; color: #888; margin-bottom: 12px; }
+  .cluster-card { background: #FAFAF8; border: 1px solid #E4E4E0; border-radius: 10px; padding: 20px; }
+  .cluster-card h3 { margin-bottom: 6px; color: #111; }
+  .cluster-card .markets { font-size: 13px; color: #6E6E6E; margin-bottom: 12px; }
   .function-section { margin-bottom: 32px; }
   .function-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
-  .function-number { width: 32px; height: 32px; background: #3D9C50; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; flex-shrink: 0; }
+  .function-number { width: 32px; height: 32px; background: #3D9C50; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; flex-shrink: 0; }
   .function-title { font-size: 20px; font-weight: 600; }
   .cle-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 16px 0; }
-  .cle-col { background: #111; border: 1px solid #2A2A2A; border-radius: 8px; padding: 14px; }
+  .cle-col { background: #F4F4F1; border: 1px solid #E4E4E0; border-radius: 8px; padding: 14px; }
   .cle-col ul { list-style: none; padding: 0; }
-  .cle-col li { font-size: 13px; color: #C8C8C8; padding: 4px 0; padding-left: 16px; position: relative; }
+  .cle-col li { font-size: 13px; color: #3D3D3D; padding: 4px 0; padding-left: 16px; position: relative; }
   .cle-col li::before { content: ''; position: absolute; left: 0; top: 10px; width: 6px; height: 6px; border-radius: 50%; }
   .cle-central li::before { background: #3D9C50; }
-  .cle-local li::before { background: #C89B2C; }
-  .cle-external li::before { background: #508CDC; }
+  .cle-local li::before { background: #A07E1C; }
+  .cle-external li::before { background: #3B6FC4; }
   .risk-box { background: rgba(200,78,44,0.06); border: 1px solid rgba(200,78,44,0.2); border-radius: 8px; padding: 14px 16px; margin: 12px 0; }
-  .risk-box .risk-label { font-size: 11px; color: #C84E2C; font-weight: 700; text-transform: uppercase; margin-bottom: 4px; }
-  .risk-box p { color: #C8C8C8; margin-bottom: 0; font-size: 13px; }
+  .risk-box .risk-label { font-size: 11px; color: #B0431F; font-weight: 700; text-transform: uppercase; margin-bottom: 4px; }
+  .risk-box p { color: #3D3D3D; margin-bottom: 0; font-size: 13px; }
   .insight-box { background: rgba(61,156,80,0.06); border: 1px solid rgba(61,156,80,0.2); border-radius: 8px; padding: 14px 16px; margin: 12px 0; }
-  .insight-box .insight-label { font-size: 11px; color: #3D9C50; font-weight: 700; text-transform: uppercase; margin-bottom: 4px; }
-  .insight-box p { color: #C8C8C8; margin-bottom: 0; font-size: 13px; }
+  .insight-box .insight-label { font-size: 11px; color: #2E7D40; font-weight: 700; text-transform: uppercase; margin-bottom: 4px; }
+  .insight-box p { color: #3D3D3D; margin-bottom: 0; font-size: 13px; }
   .open-q-box { background: rgba(200,155,44,0.06); border: 1px solid rgba(200,155,44,0.2); border-radius: 8px; padding: 14px 16px; margin: 12px 0; }
-  .open-q-box .q-label { font-size: 11px; color: #C89B2C; font-weight: 700; text-transform: uppercase; margin-bottom: 4px; }
-  .open-q-box p { color: #C8C8C8; margin-bottom: 0; font-size: 13px; }
-  .section-divider { border: none; border-top: 1px solid #2A2A2A; margin: 40px 0; }
+  .open-q-box .q-label { font-size: 11px; color: #A07E1C; font-weight: 700; text-transform: uppercase; margin-bottom: 4px; }
+  .open-q-box p { color: #3D3D3D; margin-bottom: 0; font-size: 13px; }
+  .section-divider { border: none; border-top: 1px solid #E4E4E0; margin: 40px 0; }
 
   /* Choice matrix */
   .choice-table th { text-align: center; }
   .choice-table td:not(:first-child) { text-align: center; }
-  .tick { color: #3D9C50; font-weight: 700; }
-  .cross { color: #C84E2C; font-weight: 700; }
-  .partial { color: #C89B2C; font-weight: 700; }
+  .tick { color: #2E7D40; font-weight: 700; }
+  .cross { color: #B0431F; font-weight: 700; }
+  .partial { color: #A07E1C; font-weight: 700; }
 
   /* Comment system */
-  .comment-btn { position: absolute; top: 12px; right: 12px; background: #2A2A2A; border: none; color: #888; font-size: 18px; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
-  .comment-btn:hover { background: #3A3A3A; color: #C89B2C; }
-  .comment-form { display: none; margin-top: 16px; padding-top: 16px; border-top: 1px solid #2A2A2A; }
+  .comment-btn { position: absolute; top: 12px; right: 12px; background: #E4E4E0; border: none; color: #6E6E6E; font-size: 18px; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+  .comment-btn:hover { background: #3A3A3A; color: #A07E1C; }
+  .comment-form { display: none; margin-top: 16px; padding-top: 16px; border-top: 1px solid #E4E4E0; }
   .comment-form.active { display: block; }
-  .comment-form input, .comment-form textarea { width: 100%; background: #111; border: 1px solid #2A2A2A; border-radius: 6px; color: #fff; padding: 8px 12px; font-family: inherit; font-size: 13px; margin-bottom: 8px; }
+  .comment-form input, .comment-form textarea { width: 100%; background: #F4F4F1; border: 1px solid #E4E4E0; border-radius: 6px; color: #111; padding: 8px 12px; font-family: inherit; font-size: 13px; margin-bottom: 8px; }
   .comment-form textarea { min-height: 60px; resize: vertical; }
-  .comment-form button { background: #3D9C50; border: none; color: #fff; padding: 6px 16px; border-radius: 6px; font-size: 13px; cursor: pointer; font-weight: 600; }
+  .comment-form button { background: #3D9C50; border: none; color: #111; padding: 6px 16px; border-radius: 6px; font-size: 13px; cursor: pointer; font-weight: 600; }
   .comment-form button:hover { background: #2D8C40; }
-  .comment-form .cancel-btn { background: #2A2A2A; margin-left: 8px; }
+  .comment-form .cancel-btn { background: #E4E4E0; margin-left: 8px; }
   .comment-list { margin-top: 12px; }
-  .comment-item { background: rgba(200,155,44,0.06); border-left: 2px solid #C89B2C; padding: 8px 12px; margin-bottom: 8px; border-radius: 0 6px 6px 0; }
-  .comment-item .comment-meta { font-size: 11px; color: #888; margin-bottom: 4px; }
-  .comment-item .comment-text { font-size: 13px; color: #C8C8C8; }
-  .export-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #1A1A1A; border-top: 1px solid #2A2A2A; padding: 10px 20px; display: flex; justify-content: center; gap: 12px; z-index: 100; }
-  .export-bar button { background: #2A2A2A; border: none; color: #C8C8C8; padding: 8px 16px; border-radius: 6px; font-size: 13px; cursor: pointer; font-weight: 500; }
+  .comment-item { background: rgba(200,155,44,0.06); border-left: 2px solid #A07E1C; padding: 8px 12px; margin-bottom: 8px; border-radius: 0 6px 6px 0; }
+  .comment-item .comment-meta { font-size: 11px; color: #6E6E6E; margin-bottom: 4px; }
+  .comment-item .comment-text { font-size: 13px; color: #3D3D3D; }
+  .export-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #FAFAF8; border-top: 1px solid #E4E4E0; padding: 10px 20px; display: flex; justify-content: center; gap: 12px; z-index: 100; }
+  .export-bar button { background: #E4E4E0; border: none; color: #3D3D3D; padding: 8px 16px; border-radius: 6px; font-size: 13px; cursor: pointer; font-weight: 500; }
   .export-bar button:hover { background: #3A3A3A; }
-  .export-bar .export-primary { background: #3D9C50; color: #fff; }
+  .export-bar .export-primary { background: #3D9C50; color: #111; }
   .footer-spacer { height: 60px; }
 
   @media (max-width: 768px) {
@@ -93,12 +93,12 @@
     .cluster-grid { grid-template-columns: 1fr; }
     .cle-grid { grid-template-columns: 1fr; }
   }
-  .doc-tabs { display: flex; gap: 8px; margin-bottom: 36px; border-bottom: 1px solid #2A2A2A; }
-  .doc-tab { padding: 12px 20px 11px; font-size: 14px; color: #888; text-decoration: none; border: 1px solid transparent; border-bottom: none; border-radius: 10px 10px 0 0; display: flex; flex-direction: column; gap: 2px; }
-  .doc-tab .tab-date { font-size: 11px; color: #5C5C5C; }
-  .doc-tab:hover { color: #C8C8C8; text-decoration: none; }
-  .doc-tab.active { color: #fff; background: #1A1A1A; border-color: #2A2A2A; position: relative; top: 1px; }
-  .doc-tab.active .tab-date { color: #888; }
+  .doc-tabs { display: flex; gap: 8px; margin-bottom: 36px; border-bottom: 1px solid #E4E4E0; }
+  .doc-tab { padding: 12px 20px 11px; font-size: 14px; color: #6E6E6E; text-decoration: none; border: 1px solid transparent; border-bottom: none; border-radius: 10px 10px 0 0; display: flex; flex-direction: column; gap: 2px; }
+  .doc-tab .tab-date { font-size: 11px; color: #8A8A8A; }
+  .doc-tab:hover { color: #3D3D3D; text-decoration: none; }
+  .doc-tab.active { color: #111; background: #FAFAF8; border-color: #E4E4E0; position: relative; top: 1px; }
+  .doc-tab.active .tab-date { color: #6E6E6E; }
 </style>
 </head>
 <body>
@@ -114,7 +114,7 @@
   <div class="hero">
     <h4>Trading | International Expansion</h4>
     <h1>Scaling to 5 EU Markets</h1>
-    <p style="color:#888; margin-bottom:0;">What breaks, what we need, and how we sequence it.</p>
+    <p style="color:#6E6E6E; margin-bottom:0;">What breaks, what we need, and how we sequence it.</p>
     <div class="hero-question">
       "If we scale to &pound;2M/month across 5x EU markets (with 5x localised websites) by end of year, what are the downstream effects and what resource do we need to be ready for this?" - Lestat
     </div>
@@ -132,11 +132,11 @@
       <div class="label">Market clusters</div>
     </div>
     <div class="summary-stat">
-      <div class="number" style="color:#C89B2C;">&pound;2M</div>
+      <div class="number" style="color:#A07E1C;">&pound;2M</div>
       <div class="label">Monthly target (cumulative)</div>
     </div>
     <div class="summary-stat">
-      <div class="number" style="color:#508CDC;">5</div>
+      <div class="number" style="color:#3B6FC4;">5</div>
       <div class="label">Functions to scale</div>
     </div>
     <div class="summary-stat">
@@ -237,30 +237,30 @@
       </tr>
       <tr>
         <td><strong>Website</strong></td>
-        <td><span class="cross">German site</span><br><span style="font-size:11px; color:#888;">Traffic routed to .de</span></td>
-        <td><span class="tick">Localised per market</span><br><span style="font-size:11px; color:#888;">3-4 weeks per site</span></td>
+        <td><span class="cross">German site</span><br><span style="font-size:11px; color:#6E6E6E;">Traffic routed to .de</span></td>
+        <td><span class="tick">Localised per market</span><br><span style="font-size:11px; color:#6E6E6E;">3-4 weeks per site</span></td>
       </tr>
       <tr>
         <td><strong>PPC</strong></td>
-        <td><span class="tick">Turned on</span><br><span style="font-size:11px; color:#888;">Ads in local language, landing on .de</span></td>
-        <td><span class="tick">Turned on</span><br><span style="font-size:11px; color:#888;">Ads + local site</span></td>
+        <td><span class="tick">Turned on</span><br><span style="font-size:11px; color:#6E6E6E;">Ads in local language, landing on .de</span></td>
+        <td><span class="tick">Turned on</span><br><span style="font-size:11px; color:#6E6E6E;">Ads + local site</span></td>
       </tr>
       <tr>
         <td><strong>Pricing</strong></td>
-        <td><span class="partial">German pricing or varied via feeds</span><br><span style="font-size:11px; color:#888;">Can localise pricing without localising site</span></td>
-        <td><span class="tick">Fully localised per market</span><br><span style="font-size:11px; color:#888;">Analyst capacity per cluster</span></td>
+        <td><span class="partial">German pricing or varied via feeds</span><br><span style="font-size:11px; color:#6E6E6E;">Can localise pricing without localising site</span></td>
+        <td><span class="tick">Fully localised per market</span><br><span style="font-size:11px; color:#6E6E6E;">Analyst capacity per cluster</span></td>
       </tr>
       <tr>
         <td><strong>CRM / Retention</strong></td>
-        <td><span class="cross">No localisation</span><br><span style="font-size:11px; color:#888;">German flows only</span></td>
-        <td><span class="tick">Localised flows</span><br><span style="font-size:11px; color:#888;">Copywriter per language</span></td>
+        <td><span class="cross">No localisation</span><br><span style="font-size:11px; color:#6E6E6E;">German flows only</span></td>
+        <td><span class="tick">Localised flows</span><br><span style="font-size:11px; color:#6E6E6E;">Copywriter per language</span></td>
       </tr>
       <tr>
         <td><strong>Customer Wellbeing</strong></td>
-        <td><span class="cross">Auto-translate / AI</span><br><span style="font-size:11px; color:#888;">Minimal human support</span></td>
-        <td><span class="tick">Native-language support</span><br><span style="font-size:11px; color:#888;">1-2 hires per cluster</span></td>
+        <td><span class="cross">Auto-translate / AI</span><br><span style="font-size:11px; color:#6E6E6E;">Minimal human support</span></td>
+        <td><span class="tick">Native-language support</span><br><span style="font-size:11px; color:#6E6E6E;">1-2 hires per cluster</span></td>
       </tr>
-      <tr style="background: #111;">
+      <tr style="background: #F4F4F1;">
         <td><strong>Lift required</strong></td>
         <td><span class="pill pill-green">Low</span></td>
         <td><span class="pill pill-red">High</span></td>
@@ -309,13 +309,13 @@
           </ul>
         </div>
         <div class="cle-col cle-local">
-          <h4 style="color:#C89B2C;">Local hire</h4>
+          <h4 style="color:#A07E1C;">Local hire</h4>
           <ul>
             <li>None - centralised PM capacity</li>
           </ul>
         </div>
         <div class="cle-col cle-external">
-          <h4 style="color:#508CDC;">Additional hire</h4>
+          <h4 style="color:#3B6FC4;">Additional hire</h4>
           <ul>
             <li><strong>Phil</strong> (front-end engineer, replacing Seb) - will spend the majority of his time getting localised websites live</li>
             <li>Current estimate: <strong>3-4 weeks per localisation</strong>, can potentially be significantly fast-tracked with a great dev</li>
@@ -359,13 +359,13 @@
           </ul>
         </div>
         <div class="cle-col cle-local">
-          <h4 style="color:#C89B2C;">Local hire</h4>
+          <h4 style="color:#A07E1C;">Local hire</h4>
           <ul>
             <li>None</li>
           </ul>
         </div>
         <div class="cle-col cle-external">
-          <h4 style="color:#508CDC;">External</h4>
+          <h4 style="color:#3B6FC4;">External</h4>
           <ul>
             <li><strong>Google</strong> - account setup directly managed by Google</li>
             <li><strong>Feedonomics</strong> - feed localisation per market</li>
@@ -381,7 +381,7 @@
         <p>Scales well centrally. The same set of things (Google account setup, campaign setup, feed optimisation, TripleWhale tracking) need to be replicated across the five markets. All spend can be managed by one central PM EU Manager alongside Leo.</p>
       </div>
 
-      <p style="margin-top: 16px; padding: 12px; background: #111; border-radius: 8px; font-size: 13px;"><strong>Paid Social</strong> is deprioritised until a market hits a critical threshold (~&pound;1-1.5M/month), at which point we may consider setting up a localised paid social operation.</p>
+      <p style="margin-top: 16px; padding: 12px; background: #F4F4F1; border-radius: 8px; font-size: 13px;"><strong>Paid Social</strong> is deprioritised until a market hits a critical threshold (~&pound;1-1.5M/month), at which point we may consider setting up a localised paid social operation.</p>
 
       <div class="comment-list" data-section="pm"></div>
       <div class="comment-form" data-section="pm">
@@ -414,7 +414,7 @@
           </ul>
         </div>
         <div class="cle-col cle-local">
-          <h4 style="color:#C89B2C;">Local hire</h4>
+          <h4 style="color:#A07E1C;">Local hire</h4>
           <ul>
             <li><strong>0.5-1 pricing analyst per cluster</strong> depending on competitive overlap and number of SKUs</li>
             <li>One analyst can roughly cover 500-700 SKUs (depends on order mix)</li>
@@ -422,7 +422,7 @@
           </ul>
         </div>
         <div class="cle-col cle-external">
-          <h4 style="color:#508CDC;">Additional hire</h4>
+          <h4 style="color:#3B6FC4;">Additional hire</h4>
           <ul>
             <li><strong>AI / Data Scientist</strong> - to scale pricing experiments across multiple markets and optimise margin</li>
             <li>This is distinct from the price-match scraper that Akash is building</li>
@@ -476,13 +476,13 @@
           </ul>
         </div>
         <div class="cle-col cle-local">
-          <h4 style="color:#C89B2C;">Local hire</h4>
+          <h4 style="color:#A07E1C;">Local hire</h4>
           <ul>
             <li><strong>1 local copywriter per language cluster</strong> - the critical gap</li>
           </ul>
         </div>
         <div class="cle-col cle-external">
-          <h4 style="color:#508CDC;">External</h4>
+          <h4 style="color:#3B6FC4;">External</h4>
           <ul>
             <li><strong>Klaviyo</strong> - separate account per market</li>
             <li><strong>Yocto</strong> leads flow setup and account warming per market</li>
@@ -531,7 +531,7 @@
           </ul>
         </div>
         <div class="cle-col cle-local">
-          <h4 style="color:#C89B2C;">Local hire (intensive model)</h4>
+          <h4 style="color:#A07E1C;">Local hire (intensive model)</h4>
           <ul>
             <li><strong>1-2 CW hires per language cluster</strong></li>
             <li>Must have native-level proficiency in both English and local language</li>
@@ -539,7 +539,7 @@
           </ul>
         </div>
         <div class="cle-col cle-external">
-          <h4 style="color:#508CDC;">Considerations</h4>
+          <h4 style="color:#3B6FC4;">Considerations</h4>
           <ul>
             <li>As a % of revenue, CW costs may be higher if resource sits onshore vs. offshore</li>
             <li>Hiring native speakers in traditional offshore centres (e.g. Philippines) will be challenging</li>
@@ -663,7 +663,7 @@ function renderComments(section) {
   list.innerHTML = sc.map((c, i) => {
     const d = new Date(c.timestamp);
     const ds = d.toLocaleDateString('en-GB', { day:'numeric', month:'short' }) + ' ' + d.toLocaleTimeString('en-GB', { hour:'2-digit', minute:'2-digit' });
-    return `<div class="comment-item"><div class="comment-meta"><strong>${esc(c.author)}</strong> - ${ds}<span style="cursor:pointer;float:right;color:#5C5C5C;" onclick="delComment('${section}',${i})" title="Delete">&times;</span></div><div class="comment-text">${esc(c.text)}</div></div>`;
+    return `<div class="comment-item"><div class="comment-meta"><strong>${esc(c.author)}</strong> - ${ds}<span style="cursor:pointer;float:right;color:#8A8A8A;" onclick="delComment('${section}',${i})" title="Delete">&times;</span></div><div class="comment-text">${esc(c.text)}</div></div>`;
   }).join('');
 }
 function delComment(s, i) { const c = getComments(); if (c[s]) { c[s].splice(i, 1); setComments(c); renderComments(s); } }

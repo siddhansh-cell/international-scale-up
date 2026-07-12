@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lestat_Siddhansh 1:1</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #000;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+    padding: 48px 32px 80px;
+  }
+  .wrap { max-width: 1360px; margin: 0 auto; }
+
+  /* Header */
+  .kicker { color: #888; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
+  h1 { font-size: 38px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 8px; }
+  .subtitle { color: #C8C8C8; font-size: 18px; margin-bottom: 6px; }
+  .meta { color: #5C5C5C; font-size: 13px; margin-bottom: 32px; }
+
+  /* Quote */
+  .quote {
+    border-left: 3px solid #3D9C50;
+    background: #1A1A1A;
+    border-radius: 0 10px 10px 0;
+    padding: 20px 26px;
+    margin: 0 0 44px;
+    font-size: 16px;
+    color: #C8C8C8;
+    font-style: italic;
+    max-width: 1000px;
+  }
+  .quote .attr { display: block; margin-top: 10px; font-style: normal; color: #888; font-size: 13px; }
+
+  /* Section headers */
+  h2 { font-size: 23px; font-weight: 700; margin: 52px 0 18px; letter-spacing: -0.3px; }
+  h2 .num { color: #3D9C50; margin-right: 8px; }
+  p.body { color: #C8C8C8; font-size: 15px; margin-bottom: 14px; max-width: 1000px; }
+  p.body strong { color: #fff; }
+
+  /* Section 1: gap layout — cards left, stack right */
+  .gap-layout { display: grid; grid-template-columns: 320px 1fr; gap: 20px; align-items: start; }
+  .gap-cards { display: flex; flex-direction: column; gap: 12px; }
+  .gap-card {
+    background: #1A1A1A; border: 1px solid #2A2A2A; border-radius: 12px;
+    padding: 18px 22px;
+  }
+  .gap-card .label { color: #888; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+  .gap-card .value { font-size: 30px; font-weight: 700; }
+  .gap-card .note { color: #5C5C5C; font-size: 12px; margin-top: 4px; }
+  .green { color: #3D9C50; }
+  .red { color: #C84E2C; }
+  .amber { color: #C89B2C; }
+
+  /* Gap stack */
+  .stack-row {
+    display: flex; align-items: center; gap: 16px;
+    background: #1A1A1A; border: 1px solid #2A2A2A; border-radius: 10px;
+    padding: 16px 20px; margin-bottom: 10px;
+  }
+  .stack-row .pill {
+    flex-shrink: 0; min-width: 130px; text-align: center;
+    border-radius: 999px; padding: 5px 12px; font-size: 13px; font-weight: 700;
+  }
+  .pill-green { background: rgba(61,156,80,0.15); color: #3D9C50; border: 1px solid rgba(61,156,80,0.4); }
+  .pill-amber { background: rgba(200,155,44,0.15); color: #C89B2C; border: 1px solid rgba(200,155,44,0.4); }
+  .pill-red { background: rgba(200,78,44,0.15); color: #C84E2C; border: 1px solid rgba(200,78,44,0.4); }
+  .stack-row .desc { color: #C8C8C8; font-size: 14px; }
+  .stack-row .desc strong { color: #fff; }
+  .stack-row.hole { border-color: rgba(200,78,44,0.5); }
+
+  /* Bet cards — 2x2 grid */
+  .bets-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .bet {
+    background: #1A1A1A; border: 1px solid #2A2A2A; border-radius: 14px;
+    padding: 26px 28px;
+    display: flex; flex-direction: column;
+  }
+  .bet-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 4px; }
+  .bet h3 { font-size: 19px; font-weight: 700; }
+  .bet h3 .bnum { color: #3D9C50; }
+  .owner { color: #888; font-size: 13px; }
+  .thesis { color: #fff; font-size: 15px; font-weight: 600; margin: 10px 0 12px; }
+  .bet ul { list-style: none; margin: 0 0 4px; }
+  .bet li { color: #C8C8C8; font-size: 14px; padding: 4px 0 4px 22px; position: relative; }
+  .bet li::before { content: "–"; position: absolute; left: 6px; color: #3D9C50; }
+  .bet li strong { color: #fff; }
+  .evidence-label, .action-label {
+    display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px;
+    color: #5C5C5C; margin: 14px 0 6px;
+  }
+  .fund-tag {
+    display: inline-block; margin-top: auto; padding-top: 16px;
+  }
+  .fund-tag span {
+    background: rgba(61,156,80,0.1); border: 1px solid rgba(61,156,80,0.3);
+    color: #3D9C50; font-size: 12px; font-weight: 600;
+    border-radius: 6px; padding: 5px 10px;
+  }
+
+  /* Bottom: funding + asks side by side */
+  .bottom-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: start; }
+  .bottom-grid h2 { margin-top: 52px; }
+
+  /* Funding table */
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+  th { text-align: left; color: #888; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; padding: 10px 14px; border-bottom: 1px solid #2A2A2A; }
+  td { color: #C8C8C8; font-size: 14px; padding: 12px 14px; border-bottom: 1px solid #1F1F1F; }
+  td strong { color: #fff; }
+
+  /* Asks */
+  .asks { margin-top: 16px; }
+  .ask {
+    display: flex; gap: 16px; align-items: flex-start;
+    background: #1A1A1A; border: 1px solid #2A2A2A; border-radius: 10px;
+    padding: 16px 20px; margin-bottom: 10px;
+  }
+  .ask .n {
+    flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
+    background: #3D9C50; color: #000; font-weight: 700; font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .ask .t { color: #C8C8C8; font-size: 14px; padding-top: 3px; }
+  .ask .t strong { color: #fff; }
+
+  /* Footnote */
+  .footnote { color: #5C5C5C; font-size: 12px; margin-top: 56px; border-top: 1px solid #1F1F1F; padding-top: 16px; }
+
+  @media (max-width: 1100px) {
+    .bets-grid { grid-template-columns: 1fr; }
+    .gap-layout { grid-template-columns: 1fr; }
+    .gap-cards { flex-direction: row; }
+    .gap-cards .gap-card { flex: 1; }
+    .bottom-grid { grid-template-columns: 1fr; gap: 0; }
+  }
+  @media (max-width: 640px) {
+    .gap-cards { flex-direction: column; }
+    h1 { font-size: 26px; }
+    body { padding: 32px 16px 60px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="kicker">Trading · New Customer Strategy · Q3 2026</div>
+  <h1>NC Big Bets</h1>
+  <div class="subtitle">Closing the unowned 500&ndash;700 NCs/week</div>
+  <div class="meta">Siddhansh Arora · For Lestat · Draft — July 2026</div>
+
+  <div class="quote">
+    "We're never going to hit our goals in the UK by thinking let's just keep pummeling the same funnel and making it better. We're going to have to start executing on other things at the same level that we execute on core funnel."
+    <span class="attr">Lestat — 1:1, 5 July 2026</span>
+  </div>
+
+  <!-- 1. THE GAP -->
+  <h2><span class="num">1.</span>Where we are</h2>
+  <div class="gap-layout">
+    <div class="gap-cards">
+      <div class="gap-card">
+        <div class="label">Current run rate</div>
+        <div class="value">~8&ndash;8.5k<span style="font-size:15px; color:#888;">/wk</span></div>
+        <div class="note">≈ 34&ndash;36k NCs/month</div>
+      </div>
+      <div class="gap-card">
+        <div class="label">Needed for 45k/mo</div>
+        <div class="value">~10k<span style="font-size:15px; color:#888;">/wk</span></div>
+        <div class="note">September exit target</div>
+      </div>
+      <div class="gap-card">
+        <div class="label">Gap</div>
+        <div class="value red">~1,500<span style="font-size:15px;">/wk</span></div>
+        <div class="note">agreed in 1:1, 5 Jul</div>
+      </div>
+    </div>
+    <div class="stack">
+      <div class="stack-row">
+        <span class="pill pill-green">+500&ndash;800/wk</span>
+        <span class="desc"><strong>Google LTV bidding</strong> — rolling out account-wide now. Test: NC purchases +25%, nCAC &minus;21%, NC POAS +16%. Not fully incremental — funnels spend from EC to NC.</span>
+      </div>
+      <div class="stack-row">
+        <span class="pill pill-green">+200&ndash;300/wk</span>
+        <span class="desc"><strong>GEO / LLM fix</strong> — ~60% of site currently invisible to LLM crawlers. Prerender short-term, SSR in new site build. H&amp;B at 8&ndash;9% LLM revenue vs our ~1.5%.</span>
+      </div>
+      <div class="stack-row">
+        <span class="pill pill-amber">+100/wk</span>
+        <span class="desc"><strong>Open app pilot</strong> — live.</span>
+      </div>
+      <div class="stack-row hole">
+        <span class="pill pill-red">~500&ndash;700/wk</span>
+        <span class="desc"><strong>Unowned.</strong> No owner, no plan — until this note. The four bets below are the plan.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. PRINCIPLE -->
+  <h2><span class="num">2.</span>The principle</h2>
+  <p class="body"><strong>Google is one bucket, and it is capped.</strong> Best case it delivers 400&ndash;700 incremental NCs/week. The channel is constrained by branded search volume, and we cannot create search volume through the channel. Search volume for our top brands is structurally declining (LMNT &minus;10% YoY and at 82&ndash;87% impression share — there is nothing left to buy). VMS demand overall is exploding (Amazon EU5 &gt;£3bn, +25% YoY) — it just isn't showing up in Google search.</p>
+  <p class="body">Everything below is therefore about <strong>creating demand, not harvesting it</strong> — executed at the same level as the core funnel.</p>
+
+  <!-- 3. BETS -->
+  <h2><span class="num">3.</span>The four bets</h2>
+  <div class="bets-grid">
+
+    <div class="bet">
+      <div class="bet-head">
+        <h3><span class="bnum">Bet 1</span> — Meta as a demand-gen engine</h3>
+        <span class="owner">Owner: Leo</span>
+      </div>
+      <div class="thesis">Meta is the one major channel that improved efficiency while being grown the least. The opportunity is structural — mix and creative, not budget.</div>
+      <span class="evidence-label">Why now</span>
+      <ul>
+        <li>Paid portfolio at diminishing returns overall: spend +65% YoY for +50% customers</li>
+        <li>Today paid social only targets converters — no demand-generation engine exists</li>
+        <li>Healf Zone proven as the standout incremental NC driver; scaling aggressively in Q3</li>
+      </ul>
+      <span class="action-label">Lines of attack</span>
+      <ul>
+        <li>Influencer whitelisting — paid social through creators' own accounts (Asprey list; new influencer hire ramping)</li>
+        <li>Single-brand ads and Healf multiproduct formats</li>
+        <li>Custom landing pages — already converting well above PDPs (Mary Ruth's B2G1, Brecka Essentials)</li>
+        <li>Geist live ~20 Jul (Healf Bloods, sauna blanket) — held to a 2.0+ incremental iROAS bar</li>
+        <li>Scale to 1.5x spend at current efficiency (Leo's Q3 goal)</li>
+      </ul>
+      <div class="fund-tag"><span>Funded by: existing PM budget + affiliate reallocation</span></div>
+    </div>
+
+    <div class="bet">
+      <div class="bet-head">
+        <h3><span class="bnum">Bet 2</span> — New brands as an acquisition engine</h3>
+        <span class="owner">Owner: Siddhansh + Conor (BP)</span>
+      </div>
+      <div class="thesis">New brands run 40.7% NC share vs ~28% site-wide. Every NC dip this quarter was brand-led; every surge was launch-led. This is our most reliable NC engine — and we are currently throttling it.</div>
+      <span class="evidence-label">Why now</span>
+      <ul>
+        <li>NC surges: COROS, SURI, BON CHARGE, H2Tab, Thorne. NC dips: MaryRuth's, Nordic Naturals, Form Nutrition fading</li>
+        <li>Exclusives are acquisition without CAC: Omnilux (exclusive UK launch, brand gifting 150 influencer units), Balance Phone (hands over its entire UK demand, ~10&ndash;15k NCs/yr)</li>
+        <li>Self-funding: listing fees run £15&ndash;20k per brand</li>
+        <li>Tension to resolve: buying is narrowing onboarding while we ask for +9k NCs/month; high-SV brands sit gated (Zima Dental, 20k+ monthly SV, on Hide)</li>
+      </ul>
+      <span class="action-label">Actions</span>
+      <ul>
+        <li>Reverse the onboarding narrowing — apply an NC-opportunity-cost lens to curation decisions (with Conor)</li>
+        <li>Fix the launch machine: opening POs sized to demand (Theralogix lost 95%+ of launch demand to stockout), ads live &lt;12h from launch</li>
+        <li>Protect the exclusivity ladder: Momentous, Thorne, Element, Mary Ruth's</li>
+        <li>Weekly new-brand NC tracking in the measurement layer</li>
+      </ul>
+      <div class="fund-tag"><span>Funded by: listing fees — net positive</span></div>
+    </div>
+
+    <div class="bet">
+      <div class="bet-head">
+        <h3><span class="bnum">Bet 3</span> — Awareness at net-zero cost</h3>
+        <span class="owner">Owner: Siddhansh + Oscar</span>
+      </div>
+      <div class="thesis">Awareness is 5&ndash;6% vs iHerb at 20% in London. The funnel converts once people know us — awareness is the binding constraint on every paid channel.</div>
+      <span class="evidence-label">Why now</span>
+      <ul>
+        <li>Brand search volume peaked Nov 2025 and has been flat since — NC correlates directly with it</li>
+        <li>Brands with London retail presence carry ~3x brand awareness</li>
+        <li>60% of HX ticket buyers were not existing customers — events acquire</li>
+      </ul>
+      <span class="action-label">Actions</span>
+      <ul>
+        <li>Flagship campaign rebuilt around curation (no talent fee) — measured on NCs, not reach; production-to-media ratio fixed at 25:75 or better</li>
+        <li>OOH as a repeatable pillar: take 30 margin and double the boards — JCDecaux resale model, brand-funded (£400&ndash;600k partner target)</li>
+        <li>Retail flagship P&amp;L this quarter, for Q1 2027 launch</li>
+        <li>HX cadence to 4&ndash;6 events/year, with the content engine ready before the event, not after</li>
+      </ul>
+      <div class="fund-tag"><span>Funded by: brand partners — target net-zero cost to Healf</span></div>
+    </div>
+
+    <div class="bet">
+      <div class="bet-head">
+        <h3><span class="bnum">Bet 4</span> — New channels portfolio</h3>
+        <span class="owner">Owner: Siddhansh + Adrian (carve-out)</span>
+      </div>
+      <div class="thesis">A portfolio of small, hard-gated tests on channels we have never touched. Each gets a 6-week budget and a measurement plan. No signal by end of Q3 — it dies.</div>
+      <span class="action-label">The portfolio</span>
+      <ul>
+        <li><strong>Podcast advertising</strong> — genuinely untested; health/wellness podcast audiences are exactly our buyer</li>
+        <li><strong>Direct mail</strong> — to cart/checkout abandoners as an NC channel</li>
+        <li><strong>Tube / OOH transit</strong> — meeting in motion</li>
+        <li><strong>TikTok</strong> — undiscussed to date; creator-led, not brand-account-led</li>
+        <li><strong>Radio</strong> — discount-ladder mechanic for measurement</li>
+        <li><strong>Creator storefronts</strong> — affiliate storefronts; external advisor's top recommendation</li>
+      </ul>
+      <span class="action-label">Discipline</span>
+      <ul>
+        <li>Every test carries a voucher-code or geo measurement plan from day one</li>
+        <li>Calibration deadline end of Q3: no return, no renewal</li>
+      </ul>
+      <div class="fund-tag"><span>Funded by: £200&ndash;250k carve-out (agreed in principle with Adrian)</span></div>
+    </div>
+
+  </div>
+
+  <!-- 4 + 5: FUNDING + ASKS -->
+  <div class="bottom-grid">
+    <div>
+      <h2><span class="num">4.</span>Funding — no net-new spend</h2>
+      <table>
+        <tr><th>Source</th><th>Amount</th><th>Goes to</th></tr>
+        <tr><td><strong>Adrian's carve-out</strong></td><td>£200&ndash;250k (Q3)</td><td>Bet 4 — new channels portfolio</td></tr>
+        <tr><td><strong>Affiliate cut</strong></td><td>~£60k/mo freed</td><td>Bet 1 + Google — 80% of affiliate spend redeemed by existing customers</td></tr>
+        <tr><td><strong>Brand partner funding</strong></td><td>£400&ndash;600k target</td><td>Bet 3 — flagship + OOH resale model</td></tr>
+        <tr><td><strong>Listing fees</strong></td><td>£15&ndash;20k per brand</td><td>Bet 2 — self-funding</td></tr>
+      </table>
+    </div>
+    <div>
+      <h2><span class="num">5.</span>Asks</h2>
+      <div class="asks">
+        <div class="ask"><div class="n">1</div><div class="t"><strong>Back the curation/onboarding reversal.</strong> I will bring the NC opportunity-cost numbers with Conor to the next 1:1.</div></div>
+        <div class="ask"><div class="n">2</div><div class="t"><strong>Confirm the Bet 4 carve-out</strong> so the first tests (podcast, direct mail) start this month.</div></div>
+        <div class="ask"><div class="n">3</div><div class="t"><strong>Run your brainstorm idea</strong> — everyone pitches their best "500 NCs/month" idea. Next week.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footnote">
+    Sources: NC war room (#nc-war-room), 1:1 notes 5/8 Jul, Google review 10 Jul (Max/Leo), Jay's July NC read (10 Jul), Buying weekly 6 Jul (new-brand NC share), Adrian 1:1s 8/9 Jul, Dan Elton advisory call. Figures marked as targets or test results are as reported in source threads; per-bet NC/week sizing deliberately omitted where untested.
+  </div>
+
+</div>
+</body>
+</html>

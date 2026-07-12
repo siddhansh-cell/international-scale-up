@@ -105,11 +105,6 @@
   .bottom-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: start; }
   .bottom-grid h2 { margin-top: 52px; }
 
-  /* Funding table */
-  table { width: 100%; border-collapse: collapse; margin: 16px 0; }
-  th { text-align: left; color: #6E6E6E; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; padding: 10px 14px; border-bottom: 1px solid #E4E4E0; }
-  td { color: #3D3D3D; font-size: 14px; padding: 12px 14px; border-bottom: 1px solid #ECECE9; }
-  td strong { color: #111; }
 
   /* Asks */
   .asks { margin-top: 16px; }
@@ -696,13 +691,35 @@
     <div class="thesis" style="margin-top: 0;">Run a sale at the end of July. Margin is at 35.9% — above the 35.5% target, so we have the headroom — and June showed sale periods lift underlying NC ~15% into the final day.</div>
   </div>
 
-  <!-- ASKS -->
-  <h2><span class="num">6.</span>Asks</h2>
-  <div class="asks">
-    <div class="ask"><div class="n">1</div><div class="t"><strong>Back the curation/onboarding reversal</strong> — I will bring the NC opportunity-cost numbers with Conor.</div></div>
-    <div class="ask"><div class="n">2</div><div class="t"><strong>Green-light the podcast and TikTok tests</strong> so they start this month.</div></div>
-    <div class="ask"><div class="n">3</div><div class="t"><strong>Run your brainstorm idea</strong> — everyone pitches their best "500 NCs/month" idea. Next week.</div></div>
+  <!-- NOTES -->
+  <h2><span class="num">6.</span>Notes</h2>
+  <div class="bet" style="margin-bottom: 20px;">
+    <textarea id="page-notes" spellcheck="false" style="width:100%; min-height:170px; border:1px solid #E4E4E0; border-radius:10px; padding:14px 16px; font-family:inherit; font-size:14px; line-height:1.6; color:#1A1A1A; background:#fff; resize:vertical; outline:none;"></textarea>
+    <div style="display:flex; align-items:center; gap:12px; margin-top:10px;">
+      <button id="copy-notes" style="background:#3D9C50; color:#fff; border:none; border-radius:8px; padding:8px 16px; font-size:13px; font-weight:600; cursor:pointer;">Copy notes</button>
+      <span id="notes-status" style="font-size:12px; color:#8A8A8A;">Edits save automatically in this browser</span>
+    </div>
   </div>
+  <script>
+  (function() {
+    var KEY = 'nc-big-bets-notes';
+    var DEFAULT = 'Asks:\n1. Back the curation/onboarding reversal - I will bring the NC opportunity-cost numbers with Conor.\n2. Green-light the podcast and TikTok tests so they start this month.\n3. Run the brainstorm - everyone pitches their best "500 NCs/month" idea. Next week.';
+    var ta = document.getElementById('page-notes');
+    var saved = null;
+    try { saved = localStorage.getItem(KEY); } catch (e) {}
+    ta.value = (saved !== null && saved !== '') ? saved : DEFAULT;
+    ta.addEventListener('input', function() {
+      try { localStorage.setItem(KEY, ta.value); } catch (e) {}
+    });
+    document.getElementById('copy-notes').addEventListener('click', function() {
+      navigator.clipboard.writeText(ta.value).then(function() {
+        var s = document.getElementById('notes-status');
+        s.textContent = 'Copied';
+        setTimeout(function() { s.textContent = 'Edits save automatically in this browser'; }, 1500);
+      });
+    });
+  })();
+  </script>
 
   <div class="footnote">
     Sources: NC war room (#nc-war-room), 1:1 notes 5/8 Jul, Google review 10 Jul (Max/Leo), Jay's July NC read (10 Jul), Buying weekly 6 Jul (new-brand NC share), Adrian 1:1s 8/9 Jul, Dan Elton advisory call. Figures marked as targets or test results are as reported in source threads; per-bet NC/week sizing deliberately omitted where untested.
